@@ -1,0 +1,139 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle >
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title *ngFor="let c of data">{{c.title}}</ion-title>
+       
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content   class="card-background-page" >
+
+ 
+  <ion-fab left top >
+    <button ion-fab color="secondary"><ion-icon name="volume-up"></ion-icon></button>
+    <ion-fab-list side="right" *ngFor="let c of data">
+      <button ion-fab (click)="play_Text_eng(c.Story)">ENG</button>
+      <button ion-fab (click)="play_Text_fr(c.Story_fr)">FR</button>
+      <button ion-fab (click)="stop()">Stop</button>
+    </ion-fab-list>
+  </ion-fab>
+
+
+  <ion-list  *ngFor="let c of data">
+
+    <ion-card class="col-card" >
+          
+          <img [src]="c.image"   class="card-img"  />
+         
+                
+                              <ion-title item-start class="color">{{c.title}}</ion-title>
+                              
+                      
+               
+                  
+                  <ul  class="card-episode-info">
+                      
+                    <li>
+                    {{c.genre}}
+                    </li>
+                    
+                    
+                  </ul>
+
+                  <ul class="card-episode-info">
+        
+                    <li class="quality">
+                      Story From : {{c.Story_From}}
+                    </li>
+            
+                </ul>
+                
+                    <ul  class="card-episode-info">
+                      
+                      <li class="vostfr">
+                        Read Time : {{c.Read_Time}} 
+                      </li>
+                    
+                  </ul>
+              
+                  <ul class="card-episode-info">
+                      
+                    <li class="vf">
+                      For Ages [ {{c.For_Ages}} ]
+                    </li>
+                  
+                  
+                </ul>
+                
+
+                  <!--
+          
+          <ul  class="card-episode-info">
+            
+            <li class="complete">
+              {{message.complete}}
+            </li>
+
+
+          </ul>
+          -->
+                  
+                
+    </ion-card>
+                               
+                            
+  </ion-list>
+
+  
+  <!--here nedd -->
+
+  <!--<div padding>-->
+      <ion-segment [(ngModel)]="serie">
+        <ion-segment-button value="des" > 
+          English language
+         
+        </ion-segment-button>
+        <ion-segment-button value="episodes">
+          French language
+          
+        </ion-segment-button>
+      </ion-segment>
+   <!-- </div>-->
+
+
+    <div [ngSwitch]="serie">
+      <ion-list *ngSwitchCase="'des'"    no-lines >
+
+
+            <ion-item color="dark"  *ngFor="let c of data">
+              <h3 class="text"> {{c.title}} </h3>
+              <strong   class="text">
+              {{c.Story}}
+              </strong>
+
+            </ion-item>
+
+       
+    </ion-list>
+      
+        <ion-list *ngSwitchCase="'episodes'">
+          
+
+          <ion-item color="dark"  *ngFor="let c of data">
+              <h3 class="text"> {{c.title_fr}} </h3>
+            <strong   class="text">
+            {{c.Story_fr}}
+            </strong>
+
+          </ion-item>   
+         
+        </ion-list>
+      </div>
+<!--here nedd -->
+                                     
+
+
+</ion-content>

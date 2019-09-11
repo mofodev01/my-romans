@@ -1,0 +1,8 @@
+{
+  "name": "cookmade",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "ca4096b9"
+}

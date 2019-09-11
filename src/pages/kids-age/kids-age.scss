@@ -1,0 +1,22 @@
+page-kids-age {
+    .sign-in-button-container {
+        padding-top: 40px;
+      }
+      .listcolor{
+        background-color: #141f20 ; 
+        border-radius: 20px !important;
+    }
+    .myview{
+      //https://www.google.com/search?client=firefox-b-d&biw=1366&bih=632&tbm=isch&sa=1&ei=WrI0XcTFIted1fAPy8CD6AU&q=star+icon+png+transparent+background&oq=star+icon+transparent+png&gs_l=img.1.1.0i8i30l2.219962.221762..226642...0.0..0.184.696.0j4......0....1..gws-wiz-img.......0i19j0i30i19j0i5i30i19j0i8i30i19.rf9EusGPD6o#imgdii=Ovz89JZ-1BmFbM:&imgrc=nCptHOz3LwIzwM:
+         background-image: url('../assets/imgs/stars.png');
+         background-repeat: no-repeat;
+         background-size: cover;
+    }
+    .position_list_story{
+      position: absolute;
+      top: 110px;
+      width: 92%;
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+}

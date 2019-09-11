@@ -1,0 +1,48 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>
+      Accueil
+      </ion-title>
+    
+      <ion-buttons end>
+        <button ion-button left icon-only (click)="getFoodListe()">
+           <ion-icon  name="md-refresh" ></ion-icon> 
+        </button>
+ </ion-buttons>
+         
+
+  </ion-navbar>
+</ion-header>
+
+    <ion-content  class="card-background-page">
+
+      
+
+         
+              <ion-list    no-lines >
+        
+                  <ion-card *ngFor="let c of cat">
+                       <img [src]="c.img_food" class="img" (click)="push_data_liste_food(c.nom_food_fr)"/>
+                      
+                      <!--<img-loader src="{{c.img_food}}"></img-loader>-->
+
+                      <div class="card-title">{{c.nom_food_fr}}</div>
+                      <!-- <div class="card-subtitle">{{c.nom_food_en}}</div>-->
+                    </ion-card>
+        
+               
+          </ion-list>
+          
+          
+          <ion-infinite-scroll threshold="100px" (ionInfinite)="doInfinite($event)">
+       
+          </ion-infinite-scroll>
+        
+
+  </ion-content>
+  
