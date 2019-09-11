@@ -5,7 +5,7 @@ import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-m
 
 import { FileOpener } from '@ionic-native/file-opener';
 import { DocumentViewer,DocumentViewerOptions } from '@ionic-native/document-viewer';
-
+import { ViewPdfPage } from '../view-pdf/view-pdf'
 
 @Component({
   selector: 'page-detail-romans',
@@ -27,6 +27,12 @@ export class DetailRomansPage {
     ) {
  
   }
+
+  push_url_pdf(url: String){ 
+          
+    this.navCtrl.push(ViewPdfPage,{url: url});
+  }
+
   open_pdf(urls : String){
     this.fileOpener.open(''+urls+'', 'application/pdf')
   .then(() => console.log('File is opened'))

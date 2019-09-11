@@ -48,6 +48,8 @@ import { VgBufferingModule } from 'videogular2/compiled/buffering';
 import { SearchPage } from '../pages/search/search';
 import { DetailRomansPage } from '../pages/detail-romans/detail-romans'
 import { DocumentViewer } from '@ionic-native/document-viewer';
+//import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { ViewPdfPage } from '../pages/view-pdf/view-pdf'
 @NgModule({
   declarations: [
     MyApp,
@@ -62,10 +64,12 @@ import { DocumentViewer } from '@ionic-native/document-viewer';
   RecipcesPage,
   DetailRecipesPage,
   SearchPage,
-  DetailRomansPage
+  DetailRomansPage,
+  ViewPdfPage
   ],
   imports: [
     BrowserModule,
+    //PdfViewerModule,
     HttpClientModule,
     
     VgCoreModule,
@@ -98,7 +102,8 @@ import { DocumentViewer } from '@ionic-native/document-viewer';
     RecipcesPage,
     DetailRecipesPage,
     SearchPage,
-    DetailRomansPage
+    DetailRomansPage,
+    ViewPdfPage
   ],
   providers: [
     StatusBar,
