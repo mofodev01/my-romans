@@ -10,7 +10,7 @@
       </ion-title>
     
       <ion-buttons end>
-        <button ion-button left icon-only (click)="getFoodListe()">
+        <button ion-button left icon-only (click)="getromansListe()">
            <ion-icon  name="md-refresh" ></ion-icon> 
         </button>
  </ion-buttons>
@@ -23,20 +23,43 @@
 
       
 
-         
+          <!---
               <ion-list    no-lines >
         
                   <ion-card *ngFor="let c of cat">
-                       <img [src]="c.img_food" class="img" (click)="push_data_liste_food(c.nom_food_fr)"/>
+                      <img [src]="c.img" class="img" (click)="push_data_liste_romans(c.id)"/>
                       
-                      <!--<img-loader src="{{c.img_food}}"></img-loader>-->
-
-                      <div class="card-title">{{c.nom_food_fr}}</div>
-                      <!-- <div class="card-subtitle">{{c.nom_food_en}}</div>-->
+                      <div class="card-title">{{c.title}}</div>
+                      
                     </ion-card>
         
                
           </ion-list>
+
+              
+
+--->
+
+
+<ion-grid >
+    <ion-row>
+      <ion-col  col-4 col-md-4 col-xl-3 *ngFor="let c of cat">
+        
+        <img src="{{c.img}}" class="img" (click)="push_data_liste_romans(c.id)">
+  
+        <div class="container"> 
+                          
+          <p  style="font-weight:bold; text-align: center ; width:100px; font-size: 6px; color:#fff;">
+            {{c.title}}</p>
+        </div>      
+  
+      </ion-col>
+    </ion-row>
+</ion-grid>
+          
+           <!---  
+        
+  --->
           
           
           <ion-infinite-scroll threshold="100px" (ionInfinite)="doInfinite($event)">

@@ -1,0 +1,194 @@
+page-detail-romans {
+    #button-item{
+
+
+        background: color($colors,red);
+     }
+ 
+   
+             #episode-listes{
+                 text-align: center;
+                 font-weight: bold;
+                 padding-top: 5px;
+                 font-size: 12px;
+                 
+                 
+ 
+             }
+             .info-episode-label{
+               /*  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;*/
+                font-size: 15px;
+                color: color($colors,dark);
+ 
+             }
+             .episode-info-icon{
+                 color: color($colors,primary);
+             }
+            
+ 
+ .title-size{
+                 text-align: center;
+                 
+               /*  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;*/
+                 font-size: 30px;
+                 color: color($colors,secondary);
+                 border: 1;
+             }
+            
+            
+ 
+ 
+             
+     .card-background-page{
+ 
+      background: color($colors,blue);
+      
+         ion-card{
+             position: relative;
+          text-align: center; 
+          display: block; 
+          
+          background: color($colors,shadowlite);
+          box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+ 
+         
+         }
+ 
+         .card-img{
+             height: 250px;
+             display: block;
+           
+                }
+         .card-episode-info{
+             
+            
+             position: absolute;
+             top: -8px;
+             right: 5px;
+             list-style: none ;
+             text-align: center;
+             font-size: 12px;
+             color: #fff;
+ 
+         }
+         .card-episode-info li{
+             display: inline-block ;
+             position: relative;
+             background:  rgba(0,0,0,0.33);
+             border-radius: 5px;
+             padding: 5px;
+             height: 25px;
+             line-height:16px;
+             margin:  0 auto;
+         }
+ 
+        
+         .card-episode-info .vostfr{
+             display: inline-block ;
+             position: relative;
+             background:  rgba(236, 13, 13, 0.33);
+             border-radius: 5px;
+             padding: 5px;
+             height: 25px;
+             line-height:16px;
+             margin:  0 auto;
+             margin-top: 30px;
+             font-size: 10px;
+         }
+         .card-episode-info .vf{
+             display: inline-block ;
+             position: relative;
+             background:  rgba(13, 202, 236, 0.33);
+             border-radius: 5px;
+             padding: 5px;
+             height: 25px;
+             line-height:16px;
+             margin:  0 auto;
+             margin-top: 60px;
+             font-size: 10px;
+         }
+         .card-episode-info .quality{
+             display: inline-block ;
+             position: relative;
+             
+             background:  rgba(236, 147, 13, 0.33);
+             border-radius: 5px;
+             padding: 5px;
+             height: 25px;
+             line-height:16px;
+             margin-right: 95px;
+            
+             
+         }
+     
+         .card-episode-info .genre{
+           display: inline-block ;
+           position: relative;
+           background:  rgba(98, 13, 236, 0.33);
+           border-radius: 5px;
+           padding: 5px;
+           height: 25px;
+           line-height:16px;
+          
+           margin-top: 200px;
+       }
+ 
+       .card-episode-info .complete{
+         display: inline-block ;
+         position: relative;
+         background:  rgba(13, 236, 13, 0.425);
+         border-radius: 5px;
+         padding: 5px;
+         height: 25px;
+         line-height:16px;
+         margin:  0 auto;
+         margin-top: 30px;
+         font-size: 10px;
+         }
+ 
+     }
+     
+      
+     .fav-btn{
+         color:gold;
+         
+       }
+ .color{
+     //color: secondary;
+     color:#32db64;
+ }
+ 
+       .text{
+ 
+         white-space:normal !important;
+        color:color($colors,light);
+       
+     }
+     .text_h{
+        color:color($colors,danger);   
+     }
+
+     button[ion-fab] {
+        overflow: visible;
+        position: relative;
+    
+        ion-label {
+            position: absolute;
+            top: -8px;
+    
+            // this is the difference: 
+            left: 45px;
+    
+            color: white;
+            background-color: rgba(70, 70, 70, 0.7);
+            line-height: 24px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px
+        }
+    }
+    
+    .fab{
+        contain: layout;
+    }
+}

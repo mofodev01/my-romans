@@ -23,6 +23,7 @@
         "@angular/platform-browser-dynamic": "5.2.11",
         "@ionic-native/admob-free": "^4.12.2",
         "@ionic-native/core": "~4.10.0",
+        "@ionic-native/document-viewer": "^4.20.0",
         "@ionic-native/file-opener": "^4.20.0",
         "@ionic-native/market": "^4.12.2",
         "@ionic-native/network": "^4.20.0",
@@ -40,6 +41,7 @@
         "cordova-plugin-admob-free": "^0.18.0",
         "cordova-plugin-console": "^1.1.0",
         "cordova-plugin-device": "^2.0.2",
+        "cordova-plugin-document-viewer": "^0.9.11",
         "cordova-plugin-file-opener2": "^2.2.1",
         "cordova-plugin-ionic-keyboard": "^2.0.5",
         "cordova-plugin-ionic-webview": "^1.1.19",
@@ -91,7 +93,8 @@
             "cordova-plugin-streaming-media": {},
             "cordova-plugin-file-opener2": {},
             "cordova-plugin-tencent-liteav": {},
-            "cordova-plugin-screen-orientation": {}
+            "cordova-plugin-screen-orientation": {},
+            "cordova-plugin-document-viewer": {}
         },
         "platforms": []
     },

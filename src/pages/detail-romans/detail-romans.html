@@ -1,0 +1,72 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title *ngFor="let c of cat">Auteur : {{c.auteur}}</ion-title>
+
+    <ion-buttons end>
+      <button ion-button left icon-only (click)="getprofilListe()">
+         <ion-icon  name="md-refresh" ></ion-icon> 
+      </button>
+</ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content   class="card-background-page" >
+
+  <ion-fab left top *ngFor="let c of cat">
+    <button ion-fab color="secondary" (click)="open_pdf(c.pdf)"><ion-icon name="document"></ion-icon></button>
+
+  </ion-fab>
+
+<!--
+  <ion-fab bottom left top *ngFor="let c of cat_profil">
+    <button ion-fab>Play</button>
+    <ion-fab-list >
+       <button ion-fab (click)="goToPlayerPage(c.video)">
+          <ion-icon name="play"></ion-icon>
+          <ion-label>Liteav Player</ion-label>
+       </button>
+       <button ion-fab (click)="startVideo(c.video)">
+        <ion-icon name="play"></ion-icon>
+        <ion-label>Streaming Media</ion-label>
+     </button>
+    </ion-fab-list>
+  </ion-fab>
+  -->
+
+   <ion-list  *ngFor="let c of cat">
+    <ion-card class="col-card" >
+          
+          <img [src]="c.img"   class="card-img"  />
+          <ion-title item-start class="color">{{c.title}}</ion-title>
+       
+    </ion-card>
+  </ion-list>                             
+ 
+
+    
+      <ion-list   no-lines >
+         
+        <ion-item color="dark" >
+          <h1 class="text_h"> Description</h1>
+        </ion-item>
+
+            <ion-item color="dark"  *ngFor="let c of cat">
+              <strong   class="text">
+              - {{c.description}}
+              </strong>
+            </ion-item>
+             
+    </ion-list>
+      
+ 
+      
+<!--here nedd -->
+<ion-infinite-scroll threshold="100px" (ionInfinite)="doInfinite($event)">
+ 
+</ion-infinite-scroll>                                
+
+
+</ion-content>

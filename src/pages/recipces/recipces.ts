@@ -40,7 +40,7 @@ export class RecipcesPage {
             
               loading.present();
               this.nom_food = this.navParams.get('nom_food');
-              this.JsonDataProvider.getRecipces(this.nom_food)
+              this.JsonDataProvider.getdetail_romans(this.nom_food)
                        .subscribe(
                         cat =>{
                            this.cat = cat 

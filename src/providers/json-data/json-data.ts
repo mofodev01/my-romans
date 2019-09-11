@@ -19,11 +19,11 @@ export class JsonDataProvider {
     console.log('Hello JsonDataProvider Provider');
   }
 
- /*-------------------------------api-live----------------------------------*/
-  apiUrl_live = 'http://cookmade.iptvmedia.me/Api/liste_food.php';
+ /*-------------------------------api-romans----------------------------------*/
+  apiUrl_romans = 'http://ebook.iptvmedia.me/Api/liste_romans.php';
  
- getFood(): Observable<{}> {
-  return this.http.get(this.apiUrl_live).pipe(
+ getromans(): Observable<{}> {
+  return this.http.get(this.apiUrl_romans).pipe(
     map(this.extractData),
     catchError(this.handleError)
   );
@@ -45,23 +45,23 @@ private handleError (error: Response | any) {
   console.error(errMsg);
   return Observable.throw(errMsg);
 }
-/*-----------------------------------------------------------------*/
+/*------------------------------detail-romans----------------------------------*/
 
-apiUrl_recipces= 'http://cookmade.iptvmedia.me/Api/liste_recipes.php';
+apiUrl_detail_romans= 'http://ebook.iptvmedia.me/Api/detail_romans.php';
  
-getRecipces(nom_food : String): Observable<{}> {
- return this.http.get(this.apiUrl_recipces+"?nom_food="+nom_food).pipe(
-   map(this.extractDatafilter_Recipces),
-   catchError(this.handleErrorfilter_Recipces)
+getdetail_romans(id : String): Observable<{}> {
+ return this.http.get(this.apiUrl_detail_romans+"?id="+id).pipe(
+   map(this.extractDatafilter_detail_romans),
+   catchError(this.handleErrorfilter_detail_romans)
  );
 }
 
-private extractDatafilter_Recipces(res: Response) {
+private extractDatafilter_detail_romans(res: Response) {
  let body = res;
  return body || { };
 }
 
-private handleErrorfilter_Recipces (error: Response | any) {
+private handleErrorfilter_detail_romans (error: Response | any) {
  let errMsg: string;
  if (error instanceof Response) {
    const err = error || '';

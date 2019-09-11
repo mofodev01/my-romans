@@ -3,24 +3,15 @@ import { NavController, NavParams,Platform,LoadingController, ModalController} f
 import { JsonDataProvider } from '../../providers/json-data/json-data';
 import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-media';
 
-//import { FileOpener } from '@ionic-native/file-opener';
-
+import { FileOpener } from '@ionic-native/file-opener';
+import { DocumentViewer,DocumentViewerOptions } from '@ionic-native/document-viewer';
 
 
 @Component({
-  selector: 'page-detail-recipes',
-  templateUrl: 'detail-recipes.html',
+  selector: 'page-detail-romans',
+  templateUrl: 'detail-romans.html',
 })
-
-
-
-export class DetailRecipesPage  {
-
- 
-
- 
-
-
+export class DetailRomansPage {
   id:any;
   cat: any;
 
@@ -31,10 +22,22 @@ export class DetailRecipesPage  {
     , public JsonDataProvider: JsonDataProvider, public loadingCtrl: LoadingController 
     ,private streamingMedia: StreamingMedia
     , private platform: Platform
-    //,private fileOpener: FileOpener
-   
+    ,private fileOpener: FileOpener
+    ,private document: DocumentViewer
     ) {
  
+  }
+  open_pdf(urls : String){
+    this.fileOpener.open(''+urls+'', 'application/pdf')
+  .then(() => console.log('File is opened'))
+  .catch(e => console.log('Error opening file', e));
+    /*
+    const options: DocumentViewerOptions = {
+      title: 'My PDF'
+    }
+    
+    this.document.viewDocument(''+urls+'', 'application/pdf', options)
+    */
   }
 
   goToPlayerPage( url : String ) {
@@ -97,7 +100,9 @@ this.streamingMedia.playVideo(''+url+'', options);
           
 
   ionViewDidLoad() {
-   
+    this.id = this.navParams.get('id');
+    console.log(this.id)   
 
 }
+
 }

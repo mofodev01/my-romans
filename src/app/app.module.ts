@@ -46,6 +46,8 @@ import { VgControlsModule } from 'videogular2/compiled/controls';
 import { VgOverlayPlayModule } from 'videogular2/compiled/overlay-play';
 import { VgBufferingModule } from 'videogular2/compiled/buffering';
 import { SearchPage } from '../pages/search/search';
+import { DetailRomansPage } from '../pages/detail-romans/detail-romans'
+import { DocumentViewer } from '@ionic-native/document-viewer';
 @NgModule({
   declarations: [
     MyApp,
@@ -59,7 +61,8 @@ import { SearchPage } from '../pages/search/search';
   DetailStoryPage,
   RecipcesPage,
   DetailRecipesPage,
-  SearchPage
+  SearchPage,
+  DetailRomansPage
   ],
   imports: [
     BrowserModule,
@@ -94,7 +97,8 @@ import { SearchPage } from '../pages/search/search';
     DetailStoryPage,
     RecipcesPage,
     DetailRecipesPage,
-    SearchPage
+    SearchPage,
+    DetailRomansPage
   ],
   providers: [
     StatusBar,
@@ -118,7 +122,8 @@ import { SearchPage } from '../pages/search/search';
     Network,
     TextToSpeech,
     FileOpener,
-    ScreenOrientation
+    ScreenOrientation,
+    DocumentViewer
 
    
   ]

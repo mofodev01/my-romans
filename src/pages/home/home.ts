@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams,Platform,LoadingController} from 'ionic-angular';
 import { JsonDataProvider } from '../../providers/json-data/json-data';
-import { RecipcesPage } from '../recipces/recipces';
+import { DetailRomansPage } from '../detail-romans/detail-romans';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
@@ -23,17 +23,17 @@ export class HomePage {
     infiniteScrollEvent.disabled = true;
 }
   ngOnInit() {
-    this.getFoodListe();
+    this.getromansListe();
              }
 
-             getFoodListe(){
+             getromansListe(){
               let loading = this.loadingCtrl.create({
                 content: 'Please wait...'
               });
             
               loading.present();
           
-              this.JsonDataProvider.getFood()
+              this.JsonDataProvider.getromans()
                        .subscribe(
                         cat =>{
                            this.cat = cat 
@@ -45,10 +45,11 @@ export class HomePage {
                                   });
              }
 
-             push_data_liste_food(nom_food: String){ 
+             push_data_liste_romans(id: String){ 
           
-              this.navCtrl.push(RecipcesPage,{nom_food: nom_food});
+              this.navCtrl.push(DetailRomansPage,{id: id});
             }
 
+          
 
 }
