@@ -50,6 +50,8 @@ import { DetailRomansPage } from '../pages/detail-romans/detail-romans'
 import { DocumentViewer } from '@ionic-native/document-viewer';
 //import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { ViewPdfPage } from '../pages/view-pdf/view-pdf'
+import { File } from "@ionic-native/file";
+import { FileTransfer } from "@ionic-native/file-transfer";
 @NgModule({
   declarations: [
     MyApp,
@@ -128,7 +130,9 @@ import { ViewPdfPage } from '../pages/view-pdf/view-pdf'
     TextToSpeech,
     FileOpener,
     ScreenOrientation,
-    DocumentViewer
+    DocumentViewer,
+    FileTransfer,
+    File
 
    
   ]

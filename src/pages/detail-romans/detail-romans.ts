@@ -7,6 +7,9 @@ import { FileOpener } from '@ionic-native/file-opener';
 import { DocumentViewer,DocumentViewerOptions } from '@ionic-native/document-viewer';
 import { ViewPdfPage } from '../view-pdf/view-pdf'
 
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
+import { File } from '@ionic-native/file';
+
 @Component({
   selector: 'page-detail-romans',
   templateUrl: 'detail-romans.html',
@@ -18,12 +21,14 @@ export class DetailRomansPage {
   errorMessage: string;
  
   limit = 100;
+  fileTransfer: FileTransferObject;
   constructor(public navCtrl: NavController, public navParams: NavParams
     , public JsonDataProvider: JsonDataProvider, public loadingCtrl: LoadingController 
     ,private streamingMedia: StreamingMedia
     , private platform: Platform
     ,private fileOpener: FileOpener
     ,private document: DocumentViewer
+    ,private transfer: FileTransfer, private file: File
     ) {
  
   }
@@ -33,17 +38,18 @@ export class DetailRomansPage {
     this.navCtrl.push(ViewPdfPage,{url: url});
   }
 
-  open_pdf(urls : String){
-    this.fileOpener.open(''+urls+'', 'application/pdf')
-  .then(() => console.log('File is opened'))
-  .catch(e => console.log('Error opening file', e));
-    /*
-    const options: DocumentViewerOptions = {
-      title: 'My PDF'
-    }
-    
-    this.document.viewDocument(''+urls+'', 'application/pdf', options)
-    */
+  open_pdf(urls: string, title: string){
+   
+    this.fileTransfer = this.transfer.create();
+    this.fileTransfer
+      .download(""+urls+"", this.file.dataDirectory + ""+title+"" + ".pdf")
+      .then(entry => {
+        console.log("download complete: " + entry.toURL());
+        this.fileOpener
+          .open(entry.toURL(), "application/pdf")
+          .then(() => console.log("File is opened"))
+          .catch(e => console.log("Error opening file", e));
+      });
   }
 
   goToPlayerPage( url : String ) {

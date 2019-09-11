@@ -16,7 +16,7 @@
 <ion-content   class="card-background-page" >
 
   <ion-fab left top *ngFor="let c of cat">
-    <button ion-fab color="secondary" (click)="open_pdf(c.pdf)"><ion-icon name="document"></ion-icon></button>
+    <button ion-fab color="secondary" (click)="open_pdf(c.pdf,c.auteur)"><ion-icon name="document"></ion-icon></button>
 
   </ion-fab>
 
