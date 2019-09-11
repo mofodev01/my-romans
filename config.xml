@@ -101,6 +101,5 @@
     <plugin name="cordova-plugin-screen-orientation" spec="^3.0.2" />
     <plugin name="cordova-plugin-document-viewer" spec="^0.9.11" />
     <plugin name="cordova-plugin-file" spec="^6.0.2" />
-    <plugin name="cordova-plugin-preview-any-file" spec="^0.1.4" />
     <plugin name="cordova-plugin-file-transfer" spec="^1.7.1" />
 </widget>
