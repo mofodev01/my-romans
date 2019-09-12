@@ -10,24 +10,13 @@
 </ion-buttons>
   </ion-navbar>
 
-  <ion-toolbar no-border-top>
-    <ion-segment [(ngModel)]="index">
   
-      <ion-segment-button value="description" >
-        Description
-      </ion-segment-button>
-      <ion-segment-button value="liste">
-        Liste Audio
-      </ion-segment-button>
-    
-      
-  </ion-segment>
-  </ion-toolbar> 
 
 </ion-header>
 
 
 <ion-content   class="card-background-page" >
+
 
    <ion-list  *ngFor="let c of cat_info">
     <ion-card class="col-card" >
@@ -37,6 +26,20 @@
        
     </ion-card>
   </ion-list> 
+
+  <ion-toolbar >
+      <ion-segment  [(ngModel)]="index" >
+    
+        <ion-segment-button value="description" >
+          Description
+        </ion-segment-button>
+        <ion-segment-button value="liste">
+          Liste Audio
+        </ion-segment-button>
+        
+   
+      </ion-segment>
+  </ion-toolbar>
   
   <div [ngSwitch]="index">
   <ion-list *ngSwitchCase="'description'" no-lines>
