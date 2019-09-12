@@ -1,0 +1,53 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>
+      Audio Romans
+      </ion-title>
+    
+      <ion-buttons end>
+        <button ion-button left icon-only (click)="getAudio()">
+           <ion-icon  name="md-refresh" ></ion-icon> 
+        </button>
+ </ion-buttons>
+         
+
+  </ion-navbar>
+</ion-header>
+
+    <ion-content  class="card-background-page">
+
+      
+
+<ion-grid >
+    <ion-row>
+      <ion-col  col-4 col-md-4 col-xl-3 *ngFor="let c of cat">
+        
+        <img src="{{c.img}}" class="img" (click)="push_data_audio(c.num)">
+  
+        <div class="container"> 
+                          
+          <p  style="font-weight:bold; text-align: center ; width:100px; font-size: 6px; color:#fff;">
+            {{c.title}}</p>
+        </div>      
+  
+      </ion-col>
+    </ion-row>
+</ion-grid>
+          
+           <!---  
+        
+  --->
+          
+          
+          <ion-infinite-scroll threshold="100px" (ionInfinite)="doInfinite($event)">
+       
+          </ion-infinite-scroll>
+        
+
+  </ion-content>
+  

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams,Platform,LoadingController,AlertController} from 'ionic-angular';
 import { JsonDataProvider } from '../../providers/json-data/json-data';
-import { DetailRecipesPage } from '../detail-recipes/detail-recipes';
+
 import { AdMobFree, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
 
 @Component({
@@ -37,7 +37,7 @@ export class SearchPage {
 
     push_data_liste_recipes(nom_recipes: String){ 
           
-      this.navCtrl.push(DetailRecipesPage,{nom_recipes: nom_recipes});
+     
     }
 
   launchInterstitial() {

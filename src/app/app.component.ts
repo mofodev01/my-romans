@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 
 import { HomePage } from '../pages/home/home';
-///import { LivePage } from '../pages/live/live';
+///import { LivePage } from '../pages/live/live'; 
 import { SearchPage } from '../pages/search/search';
 
 
@@ -14,7 +14,7 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 
 import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free';
 import { Network } from '@ionic-native/network';
-
+import { AudioPage } from '../pages/audio/audio';
 
 
 
@@ -39,8 +39,10 @@ export class MyApp {
     this.network_space();
     // used for an example of ngFor and navigation   SeriesPage
     this.pages = [
-      { title: 'Home', component: HomePage,icon : "md-home" },
+      { title: 'PDF Romans', component: HomePage,icon : "book" },
+      { title: 'Audio Romans', component: AudioPage,icon : "volume-mute" },
       { title: 'Search', component: SearchPage,icon : "search" }/**/
+      
     ];
 
     

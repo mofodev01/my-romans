@@ -1,0 +1,59 @@
+page-audio {
+    .sign-in-button-container {
+        padding-top: 5px;
+      }
+      .listcolor{
+        background-color: #141f20 ; 
+        border-radius: 20px !important;
+     
+    }
+    div.container {
+      text-align: center;
+     // padding: 5px 10px;
+    }
+    .position_list_story{
+      position: absolute;
+      top: 110px;
+      width: 92%;
+      padding-left: 6px;
+      padding-right: 6px;
+    }
+
+    .card-background-page {
+
+      ion-card {
+        position: relative;
+        text-align: center;
+      }
+    
+      .card-title {
+        position: absolute;
+        top: 36%;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: #fa983a;
+        background:  rgba(0,0,0,0.33);
+
+        border-radius: 5px;
+       
+       margin:  0 auto;
+       
+
+      }
+    
+      .card-subtitle {
+        font-size: 1.0em;
+        position: absolute;
+        top: 52%;
+        width: 100%;
+        color: #fa983a;
+      }
+
+      .img{
+        width:100px ;
+       height: 140px;
+      }
+    
+    }
+}

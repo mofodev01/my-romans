@@ -73,23 +73,23 @@ private handleErrorfilter_detail_romans (error: Response | any) {
  return Observable.throw(errMsg);
 }
 /*-----------------------------------------------------------------*/
-/*-----------------------------------------------------------------*/
+/*---------------------------------liste-audio-romans------------------------------*/
 
-apiUrl_liste_ingredients= 'http://cookmade.iptvmedia.me/Api/liste_ingredients.php';
+apiUrl_liste_audio= 'http://ebook.iptvmedia.me/Api/liste_audio.php';
  
-getingredients(nom_recipes_ingredients : String): Observable<{}> {
- return this.http.get(this.apiUrl_liste_ingredients+"?nom_recipes="+nom_recipes_ingredients).pipe(
-   map(this.extractDataingredients),
-   catchError(this.handleErroringredients)
+getaudio(): Observable<{}> {
+ return this.http.get(this.apiUrl_liste_audio).pipe(
+   map(this.extractDataaudio),
+   catchError(this.handleErroraudio)
  );
 }
 
-private extractDataingredients(res: Response) {
+private extractDataaudio(res: Response) {
  let body = res;
  return body || { };
 }
 
-private handleErroringredients (error: Response | any) {
+private handleErroraudio (error: Response | any) {
  let errMsg: string;
  if (error instanceof Response) {
    const err = error || '';
@@ -101,23 +101,23 @@ private handleErroringredients (error: Response | any) {
  return Observable.throw(errMsg);
 }
 /*-----------------------------------------------------------------*/
-/*-----------------------------------------------------------------*/
+/*---------------------------------detail-audio-------------------------------*/
 
-apiUrl_instrections= 'http://cookmade.iptvmedia.me/Api/liste_instrections.php';
+apiUrl_detail_audio= 'http://ebook.iptvmedia.me/Api/detail_audio.php';
  
-getInstrections(nom_recipes_instrections : String): Observable<{}> {
- return this.http.get(this.apiUrl_instrections+"?nom_recipes="+nom_recipes_instrections).pipe(
-   map(this.extractData_instrections),
-   catchError(this.handleError_instrections)
+getdetail_audio(num : Number): Observable<{}> {
+ return this.http.get(this.apiUrl_detail_audio+"?num="+num).pipe(
+   map(this.extractData_detail_audio),
+   catchError(this.handleError_detail_audio)
  );
 }
 
-private extractData_instrections(res: Response) {
+private extractData_detail_audio(res: Response) {
  let body = res;
  return body || { };
 }
 
-private handleError_instrections (error: Response | any) {
+private handleError_detail_audio (error: Response | any) {
  let errMsg: string;
  if (error instanceof Response) {
    const err = error || '';
@@ -129,12 +129,12 @@ private handleError_instrections (error: Response | any) {
  return Observable.throw(errMsg);
 }
 /*-----------------------------------------------------------------*/
-/*-----------------------------------------------------------------*/
+/*------------------------------profil-audio----------------------------------*/
 
-apiUrl_profil= 'http://cookmade.iptvmedia.me/Api/profil.php';
+apiUrl_profil= 'http://ebook.iptvmedia.me/Api/info_audio.php';
  
-getprofil(nom_recipes_profil: String): Observable<{}> {
- return this.http.get(this.apiUrl_profil+"?nom_recipes="+nom_recipes_profil).pipe(
+getprofil(num: Number): Observable<{}> {
+ return this.http.get(this.apiUrl_profil+"?num="+num).pipe(
    map(this.extractData_profil),
    catchError(this.handleError_profil)
  );

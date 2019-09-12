@@ -16,25 +16,10 @@
 <ion-content   class="card-background-page" >
 
   <ion-fab left top *ngFor="let c of cat">
-    <button ion-fab color="secondary" (click)="open_pdf(c.pdf,c.auteur)"><ion-icon name="document"></ion-icon></button>
+    <button ion-fab color="secondary" (click)="launchInterstitial()" (click)="open_pdf(c.pdf,c.auteur)"><ion-icon name="book"></ion-icon></button>
 
   </ion-fab>
 
-<!--
-  <ion-fab bottom left top *ngFor="let c of cat_profil">
-    <button ion-fab>Play</button>
-    <ion-fab-list >
-       <button ion-fab (click)="goToPlayerPage(c.video)">
-          <ion-icon name="play"></ion-icon>
-          <ion-label>Liteav Player</ion-label>
-       </button>
-       <button ion-fab (click)="startVideo(c.video)">
-        <ion-icon name="play"></ion-icon>
-        <ion-label>Streaming Media</ion-label>
-     </button>
-    </ion-fab-list>
-  </ion-fab>
-  -->
 
    <ion-list  *ngFor="let c of cat">
     <ion-card class="col-card" >

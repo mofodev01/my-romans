@@ -2,10 +2,10 @@ import { Component  } from '@angular/core';
 import { NavController, NavParams,Platform,LoadingController, ModalController} from 'ionic-angular';
 import { JsonDataProvider } from '../../providers/json-data/json-data';
 import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-media';
-
+import { AdMobFree, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
 import { FileOpener } from '@ionic-native/file-opener';
 import { DocumentViewer,DocumentViewerOptions } from '@ionic-native/document-viewer';
-import { ViewPdfPage } from '../view-pdf/view-pdf'
+
 
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
@@ -29,14 +29,12 @@ export class DetailRomansPage {
     ,private fileOpener: FileOpener
     ,private document: DocumentViewer
     ,private transfer: FileTransfer, private file: File
+    ,private admobFree: AdMobFree
     ) {
  
   }
 
-  push_url_pdf(url: String){ 
-          
-    this.navCtrl.push(ViewPdfPage,{url: url});
-  }
+  
 
   open_pdf(urls: string, title: string){
    
@@ -110,11 +108,40 @@ this.streamingMedia.playVideo(''+url+'', options);
          
 
           
-
-  ionViewDidLoad() {
-    this.id = this.navParams.get('id');
-    console.log(this.id)   
-
-}
+             launchInterstitial() {
+              if (this.platform.is('android')) {
+              const interstitialConfig: AdMobFreeInterstitialConfig = {
+                      isTesting: true,// Remove in production
+                      autoShow: true,
+                  //id: Your Ad Unit ID goes here
+                 //id:'ca-app-pub-3000905870244951/5491408793'
+              };
+            
+              this.admobFree.interstitial.config(interstitialConfig);
+            
+              
+              this.admobFree.interstitial.prepare().then(() => {
+                  // success
+                  
+              });
+            
+              }else if (this.platform.is('ios')) {
+                const interstitialConfig: AdMobFreeInterstitialConfig = {
+                  isTesting: true,// Remove in production
+                  autoShow: true,
+              //id: Your Ad Unit ID goes here
+             //id:'ca-app-pub-3000905870244951/5491408793'
+            };
+            
+            this.admobFree.interstitial.config(interstitialConfig);
+            
+            
+            this.admobFree.interstitial.prepare().then(() => {
+              // success
+              
+            });
+            
+              }
+            }
 
 }

@@ -35,7 +35,7 @@ import { SelectSearchableModule } from 'ionic-select-searchable';
 import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { Network } from '@ionic-native/network';
 import { RecipcesPage } from '../pages/recipces/recipces';
-import { DetailRecipesPage } from '../pages/detail-recipes/detail-recipes';
+import { DetailAudioPage } from '../pages/detail-audio/detail-audio';
 
 import { YoutubePipe } from '../pipes/youtube/youtube';
 import { FileOpener } from '@ionic-native/file-opener';
@@ -49,7 +49,7 @@ import { SearchPage } from '../pages/search/search';
 import { DetailRomansPage } from '../pages/detail-romans/detail-romans'
 import { DocumentViewer } from '@ionic-native/document-viewer';
 //import { PdfViewerModule } from 'ng2-pdf-viewer';
-import { ViewPdfPage } from '../pages/view-pdf/view-pdf'
+import { AudioPage } from '../pages/audio/audio';
 import { File } from "@ionic-native/file";
 import { FileTransfer } from "@ionic-native/file-transfer";
 @NgModule({
@@ -64,10 +64,10 @@ import { FileTransfer } from "@ionic-native/file-transfer";
   StoryPage,
   DetailStoryPage,
   RecipcesPage,
-  DetailRecipesPage,
+  DetailAudioPage,
   SearchPage,
   DetailRomansPage,
-  ViewPdfPage
+  AudioPage
   ],
   imports: [
     BrowserModule,
@@ -79,17 +79,7 @@ import { FileTransfer } from "@ionic-native/file-transfer";
     VgOverlayPlayModule,
     VgBufferingModule,
    
-    IonicModule.forRoot(MyApp, {
-      backButtonText: '',
-      backButtonIcon: 'arrow-round-back',
-      iconMode: 'ios',
-      mode: 'ios',
-      modalEnter: 'modal-md-slide-in',
-      modalLeave: 'modal-md-slide-out',
-      tabsPlacement: 'bottom',
-      pageTransition: 'ios-transition',
-      tabsHideOnSubPages: true
-    }),
+    IonicModule.forRoot(MyApp),
     SelectSearchableModule
   ],
   bootstrap: [IonicApp],
@@ -102,10 +92,10 @@ import { FileTransfer } from "@ionic-native/file-transfer";
     StoryPage,
     DetailStoryPage,
     RecipcesPage,
-    DetailRecipesPage,
+    DetailAudioPage,
     SearchPage,
     DetailRomansPage,
-    ViewPdfPage
+    AudioPage
   ],
   providers: [
     StatusBar,

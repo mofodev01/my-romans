@@ -1,0 +1,80 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title *ngFor="let c of cat_info">{{c.title}}</ion-title>
+
+    <ion-buttons end>
+      <button ion-button left icon-only (click)="get_detail_audio()">
+         <ion-icon  name="md-refresh" ></ion-icon> 
+      </button>
+</ion-buttons>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="index">
+  
+      <ion-segment-button value="description" >
+        Description
+      </ion-segment-button>
+      <ion-segment-button value="liste">
+        Liste Audio
+      </ion-segment-button>
+    
+      
+  </ion-segment>
+  </ion-toolbar> 
+
+</ion-header>
+
+
+<ion-content   class="card-background-page" >
+
+   <ion-list  *ngFor="let c of cat_info">
+    <ion-card class="col-card" >
+          
+          <img [src]="c.img"   class="card-img"  />
+          <ion-title item-start class="color">{{c.title}}</ion-title>
+       
+    </ion-card>
+  </ion-list> 
+  
+  <div [ngSwitch]="index">
+  <ion-list *ngSwitchCase="'description'" no-lines>
+
+  
+       
+    <ion-item color="dark" >
+      <h1 class="text_h"> Description</h1>
+    </ion-item>
+
+        <ion-item color="dark"  *ngFor="let c of cat_info">
+          <strong   class="text">
+           {{c.description}}
+          </strong>
+        </ion-item>
+
+    </ion-list>
+    <ion-list *ngSwitchCase="'liste'" no-lines>
+    <ion-item *ngFor="let c of cat" class="listcolor">
+      <ion-avatar item-start >
+        <img src="assets/imgs/server.png">
+      </ion-avatar>
+      <h2 class="fontcolor"><strong>{{c.title}}</strong></h2>
+      <button ion-button clear item-end (click)="launchInterstitial()" (click)="play_audio(c.link,c.img)" >Play</button>
+    </ion-item>
+    </ion-list>
+                         
+  </div>
+<!--here nedd -->
+<ion-infinite-scroll threshold="100px" (ionInfinite)="doInfinite($event)">
+ 
+</ion-infinite-scroll> 
+
+
+
+
+
+
+
+
+</ion-content>
