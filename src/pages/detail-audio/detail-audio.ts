@@ -41,7 +41,7 @@ export class DetailAudioPage  {
 
 
               let options: StreamingAudioOptions = {
-                bgColor: "#fa983a",
+                bgColor: "#e74c3c",
                 bgImage: ""+image+"",
                 bgImageScale: "fit", // other valid values: "stretch", "aspectStretch"
                 initFullscreen: false, // true is default. iOS only.

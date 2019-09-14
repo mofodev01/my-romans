@@ -6,15 +6,21 @@
     </button>
 
     <ion-title>
-      Audio Romans
+      Livres audio
       </ion-title>
+
+      <ion-buttons end>
+          <button ion-button left icon-only (click)="push_to_search_audio()">
+             <ion-icon  name="search" ></ion-icon> 
+          </button>
+      </ion-buttons>
     
       <ion-buttons end>
         <button ion-button left icon-only (click)="getAudio()">
            <ion-icon  name="md-refresh" ></ion-icon> 
         </button>
  </ion-buttons>
-         
+    
 
   </ion-navbar>
 </ion-header>

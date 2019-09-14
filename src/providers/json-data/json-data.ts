@@ -157,23 +157,51 @@ private handleError_profil (error: Response | any) {
  return Observable.throw(errMsg);
 }
 /*-----------------------------------------------------------------*/
-/*-----------------------------------------------------------------*/
+/*-------------------------------search-pdf---------------------------------*/
 
-apiUrl_search= 'http://cookmade.iptvmedia.me/Api/search.php';
+apiUrl_searchpdf= 'http://ebook.iptvmedia.me/Api/search_pdf.php';
  
-getsearch(nom_recipes_search: String): Observable<{}> {
- return this.http.get(this.apiUrl_search+"?likes="+nom_recipes_search).pipe(
-   map(this.extractData_search),
-   catchError(this.handleError_search)
+getsearchpdf(title_pdf: String): Observable<{}> {
+ return this.http.get(this.apiUrl_searchpdf+"?pdfs="+title_pdf).pipe(
+   map(this.extractData_searchpdf),
+   catchError(this.handleError_searchpdf)
  );
 }
 
-private extractData_search(res: Response) {
+private extractData_searchpdf(res: Response) {
  let body = res;
  return body || { };
 }
 
-private handleError_search (error: Response | any) {
+private handleError_searchpdf (error: Response | any) {
+ let errMsg: string;
+ if (error instanceof Response) {
+   const err = error || '';
+   errMsg = `${error.status} - ${error.statusText || ''} ${err}`;
+ } else {
+   errMsg = error.message ? error.message : error.toString();
+ }
+ console.error(errMsg);
+ return Observable.throw(errMsg);
+}
+/*-----------------------------------------------------------------*/
+/*-------------------------------search-audio---------------------------------*/
+
+apiUrl_searchaudio= 'http://ebook.iptvmedia.me/Api/search_audio.php';
+ 
+getsearchaudio(title_audio: String): Observable<{}> {
+ return this.http.get(this.apiUrl_searchaudio+"?audios="+title_audio).pipe(
+   map(this.extractData_searchaudio),
+   catchError(this.handleError_searchaudio)
+ );
+}
+
+private extractData_searchaudio(res: Response) {
+ let body = res;
+ return body || { };
+}
+
+private handleError_searchaudio (error: Response | any) {
  let errMsg: string;
  if (error instanceof Response) {
    const err = error || '';

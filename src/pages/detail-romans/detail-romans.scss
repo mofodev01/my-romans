@@ -48,7 +48,7 @@ page-detail-romans {
           text-align: center; 
           display: block; 
           
-          background: color($colors,shadowlite);
+          background: color($colors,dark);
           box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
  
          
@@ -165,7 +165,7 @@ page-detail-romans {
        
      }
      .text_h{
-        color:color($colors,danger);   
+        color:color($colors,blue);   
      }
 
      button[ion-fab] {

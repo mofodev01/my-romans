@@ -4,6 +4,7 @@ import { NavController, NavParams,LoadingController,MenuController} from 'ionic-
 import { JsonDataProvider } from '../../providers/json-data/json-data';
 
 import { DetailAudioPage } from '../detail-audio/detail-audio';
+import { SearchAudioPage } from '../search-audio/search-audio';
 
 @Component({
   selector: 'page-audio',
@@ -55,6 +56,10 @@ export class AudioPage {
   push_data_audio(num: Number){
 
     this.navCtrl.push(DetailAudioPage,{num: num});
+  }
+
+  push_to_search_audio(){
+    this.navCtrl.push(SearchAudioPage);
   }
 
 

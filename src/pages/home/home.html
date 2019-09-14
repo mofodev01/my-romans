@@ -6,16 +6,20 @@
     </button>
 
     <ion-title>
-      Accueil
-      </ion-title>
+      Livres PDF
+    </ion-title>
+    <ion-buttons end>
+        <button ion-button left icon-only (click)="push_to_search_pdf()">
+           <ion-icon  name="search" ></ion-icon> 
+        </button>
+    </ion-buttons>
     
       <ion-buttons end>
         <button ion-button left icon-only (click)="getromansListe()">
            <ion-icon  name="md-refresh" ></ion-icon> 
         </button>
  </ion-buttons>
-         
-
+ 
   </ion-navbar>
 </ion-header>
 

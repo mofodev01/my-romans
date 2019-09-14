@@ -27,7 +27,7 @@
     </ion-card>
   </ion-list> 
 
-  <ion-toolbar >
+  
       <ion-segment  [(ngModel)]="index" >
     
         <ion-segment-button value="description" >
@@ -39,18 +39,18 @@
         
    
       </ion-segment>
-  </ion-toolbar>
+ 
   
   <div [ngSwitch]="index">
   <ion-list *ngSwitchCase="'description'" no-lines>
 
   
        
-    <ion-item color="dark" >
+    <ion-item color="redlight" class="listcolor">
       <h1 class="text_h"> Description</h1>
     </ion-item>
 
-        <ion-item color="dark"  *ngFor="let c of cat_info">
+        <ion-item color="redlight"  *ngFor="let c of cat_info">
           <strong   class="text">
            {{c.description}}
           </strong>

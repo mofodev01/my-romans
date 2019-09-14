@@ -1,0 +1,28 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Rechercher Livres audio</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-searchbar placeholder="Rechercher Livres audio..."  (ionInput)="search_audio($event)"  >
+
+      </ion-searchbar>
+
+    <ion-grid >
+        <ion-row>
+          <ion-col  col-4 col-md-4 col-xl-3 *ngFor="let c of audioliste">
+            
+            <img src="{{c.img}}" class="img" (click)="push_data_audio(c.num)">
+      
+            <div class="container"> 
+                              
+              <p  style="font-weight:bold; text-align: center ; width:100px; font-size: 6px; color:#fff;">
+                {{c.title}}</p>
+            </div>      
+      
+          </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

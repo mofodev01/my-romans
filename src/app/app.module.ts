@@ -41,11 +41,9 @@ import { YoutubePipe } from '../pipes/youtube/youtube';
 import { FileOpener } from '@ionic-native/file-opener';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
-import { VgCoreModule } from 'videogular2/compiled/core';
-import { VgControlsModule } from 'videogular2/compiled/controls';
-import { VgOverlayPlayModule } from 'videogular2/compiled/overlay-play';
-import { VgBufferingModule } from 'videogular2/compiled/buffering';
+
 import { SearchPage } from '../pages/search/search';
+import { SearchAudioPage } from '../pages/search-audio/search-audio';
 import { DetailRomansPage } from '../pages/detail-romans/detail-romans'
 import { DocumentViewer } from '@ionic-native/document-viewer';
 //import { PdfViewerModule } from 'ng2-pdf-viewer';
@@ -67,18 +65,13 @@ import { FileTransfer } from "@ionic-native/file-transfer";
   DetailAudioPage,
   SearchPage,
   DetailRomansPage,
-  AudioPage
+  AudioPage,
+  SearchAudioPage
   ],
   imports: [
     BrowserModule,
     //PdfViewerModule,
     HttpClientModule,
-    
-    VgCoreModule,
-    VgControlsModule,
-    VgOverlayPlayModule,
-    VgBufferingModule,
-   
     IonicModule.forRoot(MyApp),
     SelectSearchableModule
   ],
@@ -95,7 +88,8 @@ import { FileTransfer } from "@ionic-native/file-transfer";
     DetailAudioPage,
     SearchPage,
     DetailRomansPage,
-    AudioPage
+    AudioPage,
+    SearchAudioPage
   ],
   providers: [
     StatusBar,

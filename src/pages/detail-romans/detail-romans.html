@@ -4,7 +4,7 @@
     <ion-title *ngFor="let c of cat">Auteur : {{c.auteur}}</ion-title>
 
     <ion-buttons end>
-      <button ion-button left icon-only (click)="getprofilListe()">
+      <button ion-button left icon-only (click)="get_detail_romans()">
          <ion-icon  name="md-refresh" ></ion-icon> 
       </button>
 </ion-buttons>
@@ -16,7 +16,7 @@
 <ion-content   class="card-background-page" >
 
   <ion-fab left top *ngFor="let c of cat">
-    <button ion-fab color="secondary" (click)="launchInterstitial()" (click)="open_pdf(c.pdf,c.auteur)"><ion-icon name="book"></ion-icon></button>
+    <button ion-fab color="primary" (click)="launchInterstitial()" (click)="open_pdf(c.pdf,c.auteur)"><ion-icon name="book"></ion-icon></button>
 
   </ion-fab>
 
@@ -34,11 +34,11 @@
     
       <ion-list   no-lines >
          
-        <ion-item color="dark" >
+        <ion-item color="redlight" >
           <h1 class="text_h"> Description</h1>
         </ion-item>
 
-            <ion-item color="dark"  *ngFor="let c of cat">
+            <ion-item color="redlight"  *ngFor="let c of cat">
               <strong   class="text">
               - {{c.description}}
               </strong>

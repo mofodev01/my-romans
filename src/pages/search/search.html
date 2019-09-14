@@ -10,34 +10,33 @@
       <button ion-button menuToggle>
           <ion-icon name="menu"></ion-icon>
         </button>
-    <ion-title>Search</ion-title>   
+    <ion-title>Rechercher Livres Pdf</ion-title>   
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content  class="card-background-page">
-  <ion-searchbar placeholder="Rechercher recipes..."  (ionInput)="search_recipes($event)"  >
+
+       <ion-searchbar placeholder="Rechercher Livres Pdf..."  (ionInput)="search_pdf($event)"  >
 
   </ion-searchbar>
 
-        <ion-list     no-lines >
-  
-            <ion-card *ngFor="let c of recipes">
-              <img [src]="c.img_recipes" class="img" (click)="launchInterstitial()" (click)="push_data_liste_recipes(c.nom_recipes)"/>
-
-                <!--<img-loader src="{{c.img_food}}"></img-loader>-->
-
-                <div class="card-title">{{c.nom_recipes}}</div>
-                <!-- <div class="card-subtitle">{{c.nom_food_en}}</div>-->
-              </ion-card>
-  
-         
-    </ion-list>
-
+  <ion-grid >
+      <ion-row>
+        <ion-col  col-4 col-md-4 col-xl-3 *ngFor="let c of pdfliste">
+          
+          <img src="{{c.img}}" class="img" (click)="push_data_liste_romans(c.id)">
     
-
-   
-  
+          <div class="container"> 
+                            
+            <p  style="font-weight:bold; text-align: center ; width:100px; font-size: 6px; color:#fff;">
+              {{c.title}}</p>
+          </div>      
+    
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+       
 
 </ion-content>

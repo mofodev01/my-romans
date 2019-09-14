@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams,Platform,LoadingController} from 'ionic-angular';
 import { JsonDataProvider } from '../../providers/json-data/json-data';
 import { DetailRomansPage } from '../detail-romans/detail-romans';
+import { SearchPage } from '../search/search';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
@@ -48,6 +49,12 @@ export class HomePage {
              push_data_liste_romans(id: String){ 
           
               this.navCtrl.push(DetailRomansPage,{id: id});
+            }
+
+            push_to_search_pdf(){
+             
+              this.navCtrl.push(SearchPage);
+              
             }
 
           

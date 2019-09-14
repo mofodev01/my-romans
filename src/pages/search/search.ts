@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams,Platform,LoadingController,AlertController} from 'ionic-angular';
 import { JsonDataProvider } from '../../providers/json-data/json-data';
-
+import { DetailRomansPage } from '../detail-romans/detail-romans';
 import { AdMobFree, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
 
 @Component({
@@ -11,34 +11,38 @@ import { AdMobFree, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free
 
 })
 export class SearchPage {
-  recipessearch : string ;
-
-  recipes: any;
+  pdfsearch : string ;
+  audiosearch : string ;
+  index: string;
+  pdfliste: any;
+  audioliste: any;
   constructor(public alertCtrl: AlertController ,public navCtrl: NavController, public navParams: NavParams
     , public JsonDataProvider: JsonDataProvider, public loadingCtrl: LoadingController 
     
     ,private admobFree: AdMobFree
     ,private platform: Platform) {
+      this.index = "pdf";
   }
 
-  search_recipes(search){
-    this.recipessearch=search.target.value
+  search_pdf(searchpdf){
+    this.pdfsearch=searchpdf.target.value
     //if(this.recipessearch.length > 2){
    // this.recipes.length = 0
-    this.loadsearch(this.recipessearch)
+    this.loadsearchpdf(this.pdfsearch)
    // }
     
     }
-    loadsearch(search){
+    loadsearchpdf(searchloadpdf){
 
-        this.JsonDataProvider.getsearch(search).subscribe(recipes =>{this.recipes = recipes});
+        this.JsonDataProvider.getsearchpdf(searchloadpdf).subscribe(pdfliste =>{this.pdfliste = pdfliste});
     
     }
 
-    push_data_liste_recipes(nom_recipes: String){ 
+    push_data_liste_romans(id: String){ 
           
-     
+      this.navCtrl.push(DetailRomansPage,{id: id});
     }
+   
 
   launchInterstitial() {
     if (this.platform.is('android')) {
