@@ -23,14 +23,15 @@ $app-direction: ltr;
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
 //https://stackoverflow.com/questions/44065099/how-can-i-change-the-color-of-the-ion-title
 
-$toolbar-background: #df4736;
-$toolbar-md-title-text-color: #fff;
-$toolbar-ios-title-text-color: #fff;
-$toolbar-wp-title-text-color: #fff;
+$toolbar-background: #eb2f06;
+//$toolbar-background: #222;
+$toolbar-md-title-text-color: #222;
+$toolbar-ios-title-text-color: #222;
+$toolbar-wp-title-text-color: #222;
 ///https://ionicframework.com/docs/api/components/searchbar/Searchbar/#sass-variables
 //$searchbar-md-input-background-color : #fff;
-$searchbar-ios-background-color: #e74c3c;
-$segment-button-ios-background-color:#e74c3c;
+$searchbar-ios-background-color: #eb2f06;
+$segment-button-ios-background-color:#eb2f06;
 
 
 $segment-button-ios-toolbar-button-max-width : 100%;
@@ -43,7 +44,7 @@ $segment-button-ios-toolbar-button-max-width : 100%;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #2980b9,
+  primary:    #222,
   secondary:  #32db64,
   danger:     #f25362,
   light:      #f4f4f4,
@@ -60,7 +61,7 @@ $colors: (
   skybluelite:#daeff1,
 
   red:        #f25362,
-  redlight:   #e74c3c,
+  redlight:   #eb2f06,
   redlite:    #fdcece,
 
   blue:       #3b5998,
