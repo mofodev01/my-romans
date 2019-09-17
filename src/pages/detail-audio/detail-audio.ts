@@ -41,7 +41,7 @@ export class DetailAudioPage  {
 
 
               let options: StreamingAudioOptions = {
-                bgColor: "#e74c3c",
+                bgColor: "#222",
                 bgImage: ""+image+"",
                 bgImageScale: "fit", // other valid values: "stretch", "aspectStretch"
                 initFullscreen: false, // true is default. iOS only.
@@ -58,9 +58,10 @@ this.streamingMedia.stopAudio();
 this.streamingMedia.pauseAudio();
 
   // Resume current audio (iOS only)
-this.streamingMedia.resumeAudio(); 
-         
-         
+this.streamingMedia.resumeAudio();
+ 
+  ///launchInterstitial
+this.launchInterstitial();
               }
 
   doInfinite(infiniteScrollEvent) {
