@@ -137,10 +137,10 @@ this.streamingMedia.stopAudio();
 launchInterstitial() {
   
   const interstitialConfig: AdMobFreeInterstitialConfig = {
-           isTesting: true,// Remove in production
+           isTesting: false,// Remove in production
           autoShow: true,
       //id: Your Ad Unit ID goes here
-    //id:'ca-app-pub-3000905870244951/7672735021'
+    id:'ca-app-pub-3000905870244951/7672735021'
   };
 
   this.admobFree.interstitial.config(interstitialConfig);
