@@ -1,0 +1,27 @@
+C:\Users\kazbi\story-kids\key\android>keytool -genkey -v -keystore MY-RELEASE-KEY.keystore -alias MY_ALIAS_NAME -keyalg RSA -keysize 2048 -validity 10000
+Entrez le mot de passe du fichier de clés :  my-romans
+Ressaisissez le nouveau mot de passe :     my-romans
+Quels sont vos nom et prénom ?
+  [moustapha fouad]:  moustapha fouad
+Quel est le nom de votre unité organisationnelle ?
+  [Unknown]:
+Quel est le nom de votre entreprise ?
+  [Unknown]:
+Quel est le nom de votre ville de résidence ?
+  [taroudant]:  taroudant
+Quel est le nom de votre état ou province ?
+  [souss massa]:  souss massa
+Quel est le code pays à deux lettres pour cette unité ?
+  [83000]:  83000
+Est-ce CN=moustapha fouad, OU=Unknown, O=Unknown, L=taroudant, ST=souss massa, C=83000 ?
+  [non]:  oui
+
+Génération d'une paire de clés RSA de 2 048 bits et d'un certificat auto-signé (SHA256withRSA) d'une validité de 10 000 jours
+        pour : CN=moustapha fouad, OU=Unknown, O=Unknown, L=taroudant, ST=souss massa, C=83000
+Entrez le mot de passe de la clé pour <MY_ALIAS_NAME>
+        (appuyez sur Entrée s'il s'agit du mot de passe du fichier de clés) :  my-romans
+Ressaisissez le nouveau mot de passe :   my-romans
+[Stockage de MY-RELEASE-KEY.keystore]
+
+Warning:
+Le fichier de clés JKS utilise un format propriétaire. Il est recommandé de migrer vers PKCS12, qui est un format standard de l'industrie en utilisant "keytool -importkeystore -srckeystore MY-RELEASE-KEY.keystore -destkeystore MY-RELEASE-KEY.keystore -deststoretype pkcs12".

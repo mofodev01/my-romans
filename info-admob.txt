@@ -1,0 +1,15 @@
+Livres_android
+Android
+ID de l'application : ca-app-pub-3000905870244951~4104669884
+banner:
+ca-app-pub-3000905870244951/7892226872
+Interstitiel:
+ca-app-pub-3000905870244951/7672735021
+-------------------------------------------------------------------------------------------------------
+Livres_ios
+iOS
+ID de l'application : ca-app-pub-3000905870244951~2634647870
+banner:
+ca-app-pub-3000905870244951/3352833174
+Interstitiel:
+ca-app-pub-3000905870244951/9831994503
