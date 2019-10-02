@@ -43,8 +43,8 @@ export class DetailAudioPage  {
               let options: StreamingAudioOptions = {
                 bgColor: "#222",
                 bgImage: ""+image+"",
-                bgImageScale: "fit", // other valid values: "stretch", "aspectStretch"
-                initFullscreen: false, // true is default. iOS only.
+                //bgImageScale: "fit", // other valid values: "stretch", "aspectStretch"
+                //initFullscreen: false, // true is default. iOS only.
                 successCallback: () => { console.log('Finished Audio') },
                 errorCallback: (e) => { console.log('Error: ', e) },
                
@@ -55,10 +55,10 @@ this.streamingMedia.playAudio(''+url+'', options);
 this.streamingMedia.stopAudio();
 
   // Pause current audio (iOS only)
-this.streamingMedia.pauseAudio();
+//this.streamingMedia.pauseAudio();
 
   // Resume current audio (iOS only)
-this.streamingMedia.resumeAudio();
+//this.streamingMedia.resumeAudio();
  
 
               }
@@ -135,7 +135,25 @@ this.streamingMedia.resumeAudio();
 }
 
 launchInterstitial() {
-  if (this.platform.is('android')) {
+  
+  const interstitialConfig: AdMobFreeInterstitialConfig = {
+          // isTesting: true,// Remove in production
+          autoShow: true,
+      //id: Your Ad Unit ID goes here
+    id:'ca-app-pub-3000905870244951/7672735021'
+  };
+
+  this.admobFree.interstitial.config(interstitialConfig);
+
+  
+  this.admobFree.interstitial.prepare().then(() => {
+      // success
+      
+  });
+
+  
+/*
+ if (this.platform.is('android')) {
   const interstitialConfig: AdMobFreeInterstitialConfig = {
           // isTesting: true,// Remove in production
           autoShow: true,
@@ -168,6 +186,8 @@ this.admobFree.interstitial.prepare().then(() => {
 });
 
   }
+*/
+  
 }
 
 }
