@@ -39,8 +39,8 @@
         "@ionic-native/text-to-speech": "^4.20.0",
         "@ionic-native/toast": "^4.11.0",
         "@ionic/storage": "2.1.3",
-        "cordova-admob-sdk": "^0.17.0",
-        "cordova-plugin-admob-free": "^0.17.3",
+        "cordova-admob-sdk": "^0.24.1",
+        "cordova-plugin-admob-free": "^0.27.0",
         "cordova-plugin-console": "^1.1.0",
         "cordova-plugin-device": "^2.0.2",
         "cordova-plugin-document-viewer": "^0.9.11",
@@ -90,7 +90,9 @@
             "cordova-plugin-x-toast": {},
             "cordova-plugin-market": {},
             "cordova-plugin-x-socialsharing": {},
-            "cordova-plugin-admob-free": {},
+            "cordova-plugin-admob-free": {
+                "ADMOB_APP_ID": "ca-app-pub-3000905870244951~4104669884"
+            },
             "cordova-plugin-console": {},
             "cordova-plugin-tts": {},
             "cordova-plugin-network-information": {},
