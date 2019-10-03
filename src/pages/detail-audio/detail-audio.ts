@@ -37,9 +37,9 @@ export class DetailAudioPage  {
       this.index = "description";
   }
 
-  play_audio( url : String,image : String) {
+  play_audio( url : String) {
 
-    if (this.platform.is('ios')) {
+    /*
               let options: StreamingAudioOptions = {
                 bgColor: "#222",
                 bgImage: ""+image+"",
@@ -60,7 +60,7 @@ this.streamingMedia.pauseAudio();
   // Resume current audio (iOS only)
 this.streamingMedia.resumeAudio();
 
-    }else if (this.platform.is('android')) {
+   */ 
 //-----------------------------------------------------------
 const file: MediaObject = this.media.create(''+url+'');
 
@@ -90,8 +90,7 @@ file.stop();
 
 file.release();
 
-    }
- 
+   
 
               }
 
