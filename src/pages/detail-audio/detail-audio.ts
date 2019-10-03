@@ -43,8 +43,8 @@ export class DetailAudioPage  {
               let options: StreamingAudioOptions = {
                 bgColor: "#222",
                 bgImage: ""+image+"",
-                //bgImageScale: "fit", // other valid values: "stretch", "aspectStretch"
-                //initFullscreen: false, // true is default. iOS only.
+                bgImageScale: "fit", // other valid values: "stretch", "aspectStretch"
+                initFullscreen: false, // true is default. iOS only.
                 successCallback: () => { console.log('Finished Audio') },
                 errorCallback: (e) => { console.log('Error: ', e) },
                
@@ -55,10 +55,10 @@ this.streamingMedia.playAudio(''+url+'', options);
 this.streamingMedia.stopAudio();
 
   // Pause current audio (iOS only)
-//this.streamingMedia.pauseAudio();
+this.streamingMedia.pauseAudio();
 
   // Resume current audio (iOS only)
-//this.streamingMedia.resumeAudio();
+this.streamingMedia.resumeAudio();
  
 
               }
