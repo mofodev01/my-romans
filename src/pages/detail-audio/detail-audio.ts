@@ -3,7 +3,7 @@ import { NavController, NavParams,Platform,LoadingController} from 'ionic-angula
 import { JsonDataProvider } from '../../providers/json-data/json-data';
 import { StreamingMedia, StreamingVideoOptions, StreamingAudioOptions } from '@ionic-native/streaming-media';
 import { AdMobFree, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
-
+import { Media, MediaObject } from '@ionic-native/media';
 
 
 @Component({
@@ -32,14 +32,14 @@ export class DetailAudioPage  {
     ,private streamingMedia: StreamingMedia
     , private platform: Platform
     ,private admobFree: AdMobFree
-   
+   ,private media: Media
     ) {
       this.index = "description";
   }
 
   play_audio( url : String,image : String) {
 
-
+    if (this.platform.is('ios')) {
               let options: StreamingAudioOptions = {
                 bgColor: "#222",
                 bgImage: ""+image+"",
@@ -59,6 +59,38 @@ this.streamingMedia.pauseAudio();
 
   // Resume current audio (iOS only)
 this.streamingMedia.resumeAudio();
+
+    }else if (this.platform.is('android')) {
+//-----------------------------------------------------------
+const file: MediaObject = this.media.create(''+url+'');
+
+// to listen to plugin events:
+
+file.onStatusUpdate.subscribe(status => console.log(status)); // fires when file status changes
+
+file.onSuccess.subscribe(() => console.log('Action is successful'));
+
+file.onError.subscribe(error => console.log('Error!', error));
+
+
+file.play();
+
+file.pause();
+
+file.getCurrentPosition().then((position) => {
+  console.log(position);
+});
+
+let duration = file.getDuration();
+console.log(duration);
+
+file.seekTo(10000);
+
+file.stop();
+
+file.release();
+
+    }
  
 
               }
