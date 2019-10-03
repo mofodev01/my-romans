@@ -85,9 +85,9 @@
      <plugin name="cordova-plugin-admob-free" spec="^0.21.0">
         <variable name="ADMOB_APP_ID" value="ca-app-pub-3000905870244951~4104669884" />
     </plugin>
-    <plugin name="cordova-admob-sdk" spec="../plugins/cordova-admob-sdk">
-        <variable name="PLAY_SERVICES_VERSION" value="+" />
-    </plugin>
+   <plugin name="cordova-admob-sdk" spec="~0.13.1">
+    <variable name="PLAY_SERVICES_VERSION" value="11.6.0" />
+   </plugin>
 
 
     <plugin name="cordova-plugin-console" spec="^1.1.0" />
