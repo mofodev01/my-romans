@@ -111,7 +111,7 @@ this.streamingMedia.playVideo(''+url+'', options);
              launchInterstitial() {
              
               const interstitialConfig: AdMobFreeInterstitialConfig = {
-                       isTesting: false,// Remove in production
+                      // isTesting: false,// Remove in production
                       autoShow: true,
                   //id: Your Ad Unit ID goes here
                 id:'ca-app-pub-3000905870244951/7672735021'

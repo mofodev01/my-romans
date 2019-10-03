@@ -248,7 +248,7 @@ export class MyApp {
         //android
         const bannerConfig: AdMobFreeBannerConfig = {
           
-          isTesting: false,// Remove in production
+          //isTesting: false,// Remove in production
           autoShow: true,
           id:'ca-app-pub-3000905870244951/7892226872'
 
