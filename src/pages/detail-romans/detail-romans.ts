@@ -116,8 +116,7 @@ this.streamingMedia.playVideo(''+url+'', options);
                       // isTesting: true,// Remove in production
                       autoShow: true,
                   //id: Your Ad Unit ID goes here
-                //id:'ca-app-pub-3000905870244951/7672735021'
-                  id:'ca-app-pub-3940256099942544/1033173712'//testads
+                id:'ca-app-pub-3000905870244951/7672735021'
               };
             
               this.admobFree.interstitial.config(interstitialConfig);
