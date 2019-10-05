@@ -18,17 +18,16 @@ import { SortPipe } from '../pipes/sort/sort';
 import { Toast } from '@ionic-native/toast';
 
 import { HttpClientModule } from '@angular/common/http';
-import { DatabaseProvider } from '../providers/database/database';
+///import { DatabaseProvider } from '../providers/database/database';
 
-import { SQLitePorter } from '@ionic-native/sqlite-porter';
-import { SQLite } from '@ionic-native/sqlite';
+
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { Market } from '@ionic-native/market';
 import { AdMobFree } from '@ionic-native/admob-free';
 
-import { KidsAgePage } from '../pages/kids-age/kids-age';
-import { StoryPage } from '../pages/story/story'
-import { DetailStoryPage } from '../pages/detail-story/detail-story'
+//import { KidsAgePage } from '../pages/kids-age/kids-age';
+//import { StoryPage } from '../pages/story/story'
+//import { DetailStoryPage } from '../pages/detail-story/detail-story'
 
 import { SelectSearchableModule } from 'ionic-select-searchable';
 
@@ -59,9 +58,7 @@ import { FileTransfer } from "@ionic-native/file-transfer";
     SearchPipe,
   SortPipe,
   YoutubePipe,
-  KidsAgePage,
-  StoryPage,
-  DetailStoryPage,
+ 
  // RecipcesPage,
   DetailAudioPage,
   SearchPage,
@@ -82,9 +79,7 @@ import { FileTransfer } from "@ionic-native/file-transfer";
     HomePage,
    /// LivePage,
    
-    KidsAgePage,
-    StoryPage,
-    DetailStoryPage,
+   
    // RecipcesPage,
     DetailAudioPage,
     SearchPage,
@@ -97,8 +92,7 @@ import { FileTransfer } from "@ionic-native/file-transfer";
     SplashScreen,
     StreamingMedia,
     
-    SQLitePorter,
-    SQLite,
+   
     Toast,
     SocialSharing,
     Market,
@@ -109,7 +103,7 @@ import { FileTransfer } from "@ionic-native/file-transfer";
    */
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     JsonDataProvider,
-    DatabaseProvider,
+   
     AdMobFree,
     Network,
     //TextToSpeech,
