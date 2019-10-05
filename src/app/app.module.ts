@@ -32,20 +32,20 @@ import { DetailStoryPage } from '../pages/detail-story/detail-story'
 
 import { SelectSearchableModule } from 'ionic-select-searchable';
 
-import { TextToSpeech } from '@ionic-native/text-to-speech';
+//import { TextToSpeech } from '@ionic-native/text-to-speech';
 import { Network } from '@ionic-native/network';
-import { RecipcesPage } from '../pages/recipces/recipces';
+//import { RecipcesPage } from '../pages/recipces/recipces';
 import { DetailAudioPage } from '../pages/detail-audio/detail-audio';
 
 import { YoutubePipe } from '../pipes/youtube/youtube';
 import { FileOpener } from '@ionic-native/file-opener';
-import { ScreenOrientation } from '@ionic-native/screen-orientation';
+//import { ScreenOrientation } from '@ionic-native/screen-orientation';
 
 
 import { SearchPage } from '../pages/search/search';
 import { SearchAudioPage } from '../pages/search-audio/search-audio';
 import { DetailRomansPage } from '../pages/detail-romans/detail-romans'
-import { DocumentViewer } from '@ionic-native/document-viewer';
+//import { DocumentViewer } from '@ionic-native/document-viewer';
 //import { PdfViewerModule } from 'ng2-pdf-viewer';
 import { AudioPage } from '../pages/audio/audio';
 import { File } from "@ionic-native/file";
@@ -62,7 +62,7 @@ import { FileTransfer } from "@ionic-native/file-transfer";
   KidsAgePage,
   StoryPage,
   DetailStoryPage,
-  RecipcesPage,
+ // RecipcesPage,
   DetailAudioPage,
   SearchPage,
   DetailRomansPage,
@@ -85,7 +85,7 @@ import { FileTransfer } from "@ionic-native/file-transfer";
     KidsAgePage,
     StoryPage,
     DetailStoryPage,
-    RecipcesPage,
+   // RecipcesPage,
     DetailAudioPage,
     SearchPage,
     DetailRomansPage,
@@ -112,10 +112,10 @@ import { FileTransfer } from "@ionic-native/file-transfer";
     DatabaseProvider,
     AdMobFree,
     Network,
-    TextToSpeech,
+    //TextToSpeech,
     FileOpener,
-    ScreenOrientation,
-    DocumentViewer,
+    //ScreenOrientation,
+    //DocumentViewer,
     FileTransfer,
     File
    

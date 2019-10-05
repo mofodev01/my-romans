@@ -4,7 +4,7 @@ import { JsonDataProvider } from '../../providers/json-data/json-data';
 import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-media';
 import { AdMobFree, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
 import { FileOpener } from '@ionic-native/file-opener';
-import { DocumentViewer,DocumentViewerOptions } from '@ionic-native/document-viewer';
+
 
 
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer';
@@ -27,7 +27,7 @@ export class DetailRomansPage {
     ,private streamingMedia: StreamingMedia
     , private platform: Platform
     ,private fileOpener: FileOpener
-    ,private document: DocumentViewer
+    
     ,private transfer: FileTransfer, private file: File
     ,private admobFree: AdMobFree
     ) {
