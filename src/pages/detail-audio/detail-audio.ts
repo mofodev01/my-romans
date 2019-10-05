@@ -139,11 +139,11 @@ launchInterstitial() {
 /**/
  if (this.platform.is('android')) {
   const interstitialConfig: AdMobFreeInterstitialConfig = {
-         // isTesting: true,// Remove in production
+         isTesting: true,// Remove in production
           autoShow: true,
       //id: Your Ad Unit ID goes here
-    //id:'ca-app-pub-3000905870244951/7672735021'
-      id:'ca-app-pub-3940256099942544/1033173712'
+    id:'ca-app-pub-3000905870244951/7672735021'
+     // id:'ca-app-pub-3940256099942544/1033173712'//testads
 
   };
 
