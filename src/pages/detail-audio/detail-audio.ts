@@ -135,24 +135,8 @@ this.streamingMedia.resumeAudio();
 }
 
 launchInterstitial() {
-  
-  const interstitialConfig: AdMobFreeInterstitialConfig = {
-         // isTesting: true,// Remove in production
-          autoShow: true,
-      //id: Your Ad Unit ID goes here
-    id:'ca-app-pub-3000905870244951/7672735021'
-  };
-
-  this.admobFree.interstitial.config(interstitialConfig);
-
-  
-  this.admobFree.interstitial.prepare().then(() => {
-      // success
-      
-  });
-
-  
-/*
+ 
+/**/
  if (this.platform.is('android')) {
   const interstitialConfig: AdMobFreeInterstitialConfig = {
           // isTesting: true,// Remove in production
@@ -174,7 +158,8 @@ launchInterstitial() {
       //isTesting: true,// Remove in production
       autoShow: true,
   //id: Your Ad Unit ID goes here
- id:'ca-app-pub-3000905870244951/9831994503'
+ //id:'ca-app-pub-3000905870244951/9831994503'
+ id:'ca-app-pub-3940256099942544/1033173712'//testads
 };
 
 this.admobFree.interstitial.config(interstitialConfig);
@@ -186,7 +171,7 @@ this.admobFree.interstitial.prepare().then(() => {
 });
 
   }
-*/
+
   
 }
 
