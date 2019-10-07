@@ -46,6 +46,7 @@
         <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
     </platform>
     <platform name="ios">
+        <preference name="pods_ios_min_version" value="11.0"/>
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <icon height="57" src="resources/ios/icon/icon.png" width="57" />
@@ -96,5 +97,7 @@
     <plugin name="cordova-plugin-file-opener2" spec="^2.2.1" />
     <plugin name="cordova-plugin-file" spec="^6.0.2" />
     <plugin name="cordova-plugin-file-transfer" spec="^1.7.1" />
-    
+    <plugin name="cordova-plugin-fbanfree" spec="0.0.8">
+        <variable name="ANDROID_SUPPORT_RECYCLERVIEW_VERSION" value="20+" />
+    </plugin>
 </widget>

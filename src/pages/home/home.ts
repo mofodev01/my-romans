@@ -3,6 +3,9 @@ import { NavController, NavParams,Platform,LoadingController} from 'ionic-angula
 import { JsonDataProvider } from '../../providers/json-data/json-data';
 import { DetailRomansPage } from '../detail-romans/detail-romans';
 import { SearchPage } from '../search/search';
+
+declare var fbanfree: any;
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
@@ -55,6 +58,16 @@ export class HomePage {
              
               this.navCtrl.push(SearchPage);
               
+            }
+
+            ads_facebook(){
+              fbanfree.showInterstitial('752642228498844_752626718500395')
+              .then(res => {
+              console.log('interstitial show success:', res);
+               })
+              .catch(err => {
+               console.log('error showing interstitial:', err);
+              });
             }
 
           
