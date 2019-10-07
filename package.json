@@ -85,9 +85,7 @@
             "cordova-plugin-file-opener2": {},
             "cordova-plugin-file": {},
             "cordova-plugin-file-transfer": {},
-            "cordova-plugin-fbanfree": {
-                "ANDROID_SUPPORT_RECYCLERVIEW_VERSION": "20+"
-            }
+            "cordova-plugin-fbanfree": {}
         },
         "platforms": []
     }
