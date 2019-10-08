@@ -1,7 +1,7 @@
 import { Component  } from '@angular/core';
 import { NavController, NavParams,Platform,LoadingController} from 'ionic-angular';
 import { JsonDataProvider } from '../../providers/json-data/json-data';
-import { StreamingMedia, StreamingVideoOptions, StreamingAudioOptions } from '@ionic-native/streaming-media';
+import { StreamingMedia, StreamingAudioOptions } from '@ionic-native/streaming-media';
 import { AdMobFree, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
 
 
@@ -41,7 +41,7 @@ export class DetailAudioPage  {
 
 
               let options: StreamingAudioOptions = {
-                bgColor: "#1e3799",
+                bgColor: "#eb2f06",
                 bgImage: ""+image+"",
                 bgImageScale: "fit", // other valid values: "stretch", "aspectStretch"
                 initFullscreen: false, // true is default. iOS only.
@@ -139,7 +139,7 @@ launchInterstitial() {
 /**/
  if (this.platform.is('android')) {
   const interstitialConfig: AdMobFreeInterstitialConfig = {
-         isTesting: true,// Remove in production
+        // isTesting: true, Remove in production
           autoShow: true,
       //id: Your Ad Unit ID goes here
     id:'ca-app-pub-3000905870244951/7672735021'

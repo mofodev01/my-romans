@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams,Platform,LoadingController} from 'ionic-angular';
+import { NavController, NavParams,LoadingController} from 'ionic-angular';
 import { JsonDataProvider } from '../../providers/json-data/json-data';
 import { DetailRomansPage } from '../detail-romans/detail-romans';
 import { SearchPage } from '../search/search';
 
-declare var fbanfree: any;
+//declare var fbanfree: any;
 
 @Component({
   selector: 'page-home',
@@ -59,7 +59,7 @@ export class HomePage {
               this.navCtrl.push(SearchPage);
               
             }
-
+           /*
             ads_facebook(){
               fbanfree.showInterstitial('752642228498844_752626718500395')
               .then(res => {
@@ -70,6 +70,6 @@ export class HomePage {
               });
             }
 
-          
+          */
 
 }

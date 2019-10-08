@@ -249,7 +249,7 @@ export class MyApp {
              if (this.platform.is('android')) {
         const bannerConfig: AdMobFreeBannerConfig = {
           
-          isTesting: true,// Remove in production
+          //isTesting: true, Remove in production
           autoShow: true,
           id:'ca-app-pub-3000905870244951/7892226872'
         // id:'ca-app-pub-3940256099942544/6300978111'//testads
