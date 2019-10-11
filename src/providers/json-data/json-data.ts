@@ -20,7 +20,7 @@ export class JsonDataProvider {
   }
 
  /*-------------------------------api-romans----------------------------------*/
-  apiUrl_romans = 'http://ebook.iptvmedia.me/Api/liste_romans.php';
+  apiUrl_romans = 'http://mylivre.appmofix.com/Api/liste_romans.php';
  
  getromans(): Observable<{}> {
   return this.http.get(this.apiUrl_romans).pipe(
@@ -47,7 +47,7 @@ private handleError (error: Response | any) {
 }
 /*------------------------------detail-romans----------------------------------*/
 
-apiUrl_detail_romans= 'http://ebook.iptvmedia.me/Api/detail_romans.php';
+apiUrl_detail_romans= 'http://mylivre.appmofix.com/Api/detail_romans.php';
  
 getdetail_romans(id : String): Observable<{}> {
  return this.http.get(this.apiUrl_detail_romans+"?id="+id).pipe(
@@ -75,7 +75,7 @@ private handleErrorfilter_detail_romans (error: Response | any) {
 /*-----------------------------------------------------------------*/
 /*---------------------------------liste-audio-romans------------------------------*/
 
-apiUrl_liste_audio= 'http://ebook.iptvmedia.me/Api/liste_audio.php';
+apiUrl_liste_audio= 'http://mylivre.appmofix.com/Api/liste_audio.php';
  
 getaudio(): Observable<{}> {
  return this.http.get(this.apiUrl_liste_audio).pipe(
@@ -100,10 +100,10 @@ private handleErroraudio (error: Response | any) {
  console.error(errMsg);
  return Observable.throw(errMsg);
 }
-/*-----------------------------------------------------------------*/
+/*---------------------------------------http://mylivre.appmofix.com/--------------------------*/
 /*---------------------------------detail-audio-------------------------------*/
 
-apiUrl_detail_audio= 'http://ebook.iptvmedia.me/Api/detail_audio.php';
+apiUrl_detail_audio= 'http://mylivre.appmofix.com/Api/detail_audio.php';
  
 getdetail_audio(num : Number): Observable<{}> {
  return this.http.get(this.apiUrl_detail_audio+"?num="+num).pipe(
@@ -131,7 +131,7 @@ private handleError_detail_audio (error: Response | any) {
 /*-----------------------------------------------------------------*/
 /*------------------------------profil-audio----------------------------------*/
 
-apiUrl_profil= 'http://ebook.iptvmedia.me/Api/info_audio.php';
+apiUrl_profil= 'http://mylivre.appmofix.com/Api/info_audio.php';
  
 getprofil(num: Number): Observable<{}> {
  return this.http.get(this.apiUrl_profil+"?num="+num).pipe(
@@ -159,7 +159,7 @@ private handleError_profil (error: Response | any) {
 /*-----------------------------------------------------------------*/
 /*-------------------------------search-pdf---------------------------------*/
 
-apiUrl_searchpdf= 'http://ebook.iptvmedia.me/Api/search_pdf.php';
+apiUrl_searchpdf= 'http://mylivre.appmofix.com/Api/search_pdf.php';
  
 getsearchpdf(title_pdf: String): Observable<{}> {
  return this.http.get(this.apiUrl_searchpdf+"?pdfs="+title_pdf).pipe(
@@ -187,7 +187,7 @@ private handleError_searchpdf (error: Response | any) {
 /*-----------------------------------------------------------------*/
 /*-------------------------------search-audio---------------------------------*/
 
-apiUrl_searchaudio= 'http://ebook.iptvmedia.me/Api/search_audio.php';
+apiUrl_searchaudio= 'http://mylivre.appmofix.com/Api/search_audio.php';
  
 getsearchaudio(title_audio: String): Observable<{}> {
  return this.http.get(this.apiUrl_searchaudio+"?audios="+title_audio).pipe(
