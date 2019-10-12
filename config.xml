@@ -24,6 +24,7 @@
     <preference name="loadUrlTimeoutValue" value="60000" />
     <preference name="AutoHideSplashScreen" value="false" />
     <preference name="AllowInlineMediaPlayback" value="true" />
+    <preference name="android-targetSdkVersion" value="28"/>
     <platform name="android">
         <allow-intent href="market:*" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
