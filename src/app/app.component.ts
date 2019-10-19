@@ -85,10 +85,10 @@ export class MyApp {
 
   rateApp(){
     if (this.platform.is('android')) {
-    this.market.open('com.stories.magic');
+    this.market.open('com.romans.book');
    
     }else if(this.platform.is('ios')){
-    this.market.open('com.stories.magic');
+    this.market.open('com.romans.book');
     
    
     }
@@ -108,7 +108,7 @@ export class MyApp {
              // cssClass: 'action-red',
               handler: () => {
                
-                  this.socialSharing.shareViaFacebook("", "", "https://play.google.com/store/apps/details?id=com.stories.magic").then(() => {
+                  this.socialSharing.shareViaFacebook("", "", "https://play.google.com/store/apps/details?id=com.romans.book").then(() => {
                     console.log("shareViaFacebook: Success");
                   }).catch(() => {
                     console.error("shareViaFacebook: failed");
@@ -124,7 +124,7 @@ export class MyApp {
               icon: 'logo-whatsapp',
            
               handler: () => {
-                this.socialSharing.shareViaWhatsApp("", "https://image.prntscr.com/image/yYP6KIBeTXKCpCwHiiRP9Q.png" ,"https://play.google.com/store/apps/details?id=com.stories.magic").then(() => {
+                this.socialSharing.shareViaWhatsApp("", "https://image.prntscr.com/image/yYP6KIBeTXKCpCwHiiRP9Q.png" ,"https://play.google.com/store/apps/details?id=com.romans.book").then(() => {
                   console.log("shareViaWhatsApp: Success");
                 }).catch(() => {
                   console.error("shareViaWhatsApp: failed");
@@ -137,7 +137,7 @@ export class MyApp {
               icon: 'logo-twitter',
            
               handler: () => {
-                this.socialSharing.shareViaTwitter("", "https://image.prntscr.com/image/yYP6KIBeTXKCpCwHiiRP9Q.png" ,"https://play.google.com/store/apps/details?id=com.stories.magic").then(() => {
+                this.socialSharing.shareViaTwitter("", "https://image.prntscr.com/image/yYP6KIBeTXKCpCwHiiRP9Q.png" ,"https://play.google.com/store/apps/details?id=com.romans.book").then(() => {
                   console.log("shareViatwitter: Success");
                 }).catch(() => {
                   console.error("shareViatwitter: failed");
@@ -150,7 +150,7 @@ export class MyApp {
               icon: 'paper-plane',
             
               handler: () => {
-                this.socialSharing.share("","", "https://image.prntscr.com/image/yYP6KIBeTXKCpCwHiiRP9Q.png" ,"https://play.google.com/store/apps/details?id=com.stories.magic").then(() => {
+                this.socialSharing.share("","", "https://image.prntscr.com/image/yYP6KIBeTXKCpCwHiiRP9Q.png" ,"https://play.google.com/store/apps/details?id=com.romans.book").then(() => {
                   console.log("shareViatwitter: Success");
                 }).catch(() => {
                   console.error("shareViatwitter: failed");
