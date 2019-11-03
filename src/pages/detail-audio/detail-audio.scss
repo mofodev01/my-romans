@@ -195,6 +195,18 @@ page-detail-audio {
     .listcolor{
         background-color: rgb(44, 44, 44) ; 
     }
+
+    .itemcolor{
+        background-color: rgba(0,0,0,0.33) ; 
+        border-radius: 20px !important;
+    }
     
 
+}
+.col-card{
+    width: 350px;
+   // height: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
 }

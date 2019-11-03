@@ -38,7 +38,7 @@
         "cordova-plugin-admob-free": "^0.18.0",
         "cordova-plugin-console": "^1.1.0",
         "cordova-plugin-device": "^2.0.2",
-        
+        "cordova-custom-config": "^5.1.0",
         "cordova-plugin-file": "^6.0.2",
         "cordova-plugin-file-opener2": "^2.2.1",
         "cordova-plugin-file-transfer": "^1.7.1",
@@ -84,7 +84,8 @@
             "cordova-plugin-streaming-media": {},
             "cordova-plugin-file-opener2": {},
             "cordova-plugin-file": {},
-            "cordova-plugin-file-transfer": {}
+            "cordova-plugin-file-transfer": {},
+            "cordova-custom-config": {}
         },
         "platforms": []
     }

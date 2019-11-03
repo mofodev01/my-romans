@@ -21,13 +21,21 @@
   </ion-fab>
 
 
-   <ion-list  *ngFor="let c of cat">
+   <ion-list  >
+
+      <ion-grid >
+          <ion-row justify-content-center align-items-center *ngFor="let c of cat">
+
     <ion-card class="col-card" >
           
           <img [src]="c.img"   class="card-img"  />
           <ion-title item-start class="color">{{c.title}}</ion-title>
        
     </ion-card>
+
+  </ion-row>
+</ion-grid>
+
   </ion-list>                             
  
 
