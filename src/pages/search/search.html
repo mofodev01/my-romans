@@ -21,22 +21,19 @@
        <ion-searchbar placeholder="Rechercher Livres Pdf..."  (ionInput)="search_pdf($event)"  >
 
   </ion-searchbar>
-
+ 
   <ion-grid >
-      <ion-row>
-        <ion-col  col-4 col-md-4 col-xl-3 *ngFor="let c of pdfliste">
-          
-          <img src="{{c.img}}" class="img" (click)="push_data_liste_romans(c.id)">
-    
-          <div class="container"> 
-                            
-            <p  style="font-weight:bold; text-align: center ; width:100px; font-size: 6px; color:#fff;">
-              {{c.title}}</p>
-          </div>      
-    
-        </ion-col>
-      </ion-row>
-  </ion-grid>
+    <ion-row>
+      <ion-col col-6 col-md-4 col-xl-3 *ngFor="let c of pdfliste">
+        <ion-card >
+        <img src="{{c.img}}"  class="img" (click)="push_data_liste_romans(c.id)">
        
+      </ion-card>
+      <p  style="font-weight:bold; text-align: center ; width:100%; font-size: 16px; color:#fff;">
+        {{c.title}}</p>
+      </ion-col>
+    </ion-row>
+</ion-grid>
+      
 
 </ion-content>
