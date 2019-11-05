@@ -7,3 +7,8 @@
 <plugin name="cordova-plugin-ionic-webview" spec="^1.1.19" />
 
 "cordova-plugin-ionic-webview": "^1.1.19",
+---------------------------------------------------------
+ "cordova-plugin-console": {},
+ "cordova-plugin-console": "^1.1.0",
+ <plugin name="cordova-plugin-console" spec="^1.1.0" />
+ --------------------------------------------------------
