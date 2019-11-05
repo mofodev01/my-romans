@@ -1,6 +1,0 @@
-
-nom : Cookmade
-UGS : cookmade2019
-id : 
-
-L’icône App Store doit avoir les dimensions suivantes : 1024 × 1024.
