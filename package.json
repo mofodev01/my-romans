@@ -1,6 +1,6 @@
 {
-    "name": "iptv",
-    "version": "0.0.1",
+    "name": "mylivres",
+    "version": "0.0.2",
     "author": "Ionic Framework",
     "homepage": "http://ionicframework.com/",
     "private": true,
@@ -36,6 +36,7 @@
         "@ionic/storage": "2.1.3",
         "cordova-admob-sdk": "^0.18.0",
         "cordova-plugin-admob-free": "^0.18.0",
+
         
         "cordova-plugin-device": "^2.0.2",
         "cordova-custom-config": "^5.1.0",
@@ -80,6 +81,7 @@
             "cordova-plugin-x-socialsharing": {},
             "cordova-plugin-admob-free": {},
             
+
             "cordova-plugin-network-information": {},
             "cordova-plugin-streaming-media": {},
             "cordova-plugin-file-opener2": {},
