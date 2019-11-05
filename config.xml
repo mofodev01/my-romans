@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.romans.book" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android" >
+<widget id="com.romans.book" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>My Livres</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
@@ -24,13 +24,11 @@
     <preference name="loadUrlTimeoutValue" value="60000" />
     <preference name="AutoHideSplashScreen" value="false" />
     <preference name="AllowInlineMediaPlayback" value="true" />
-    <preference name="android-targetSdkVersion" value="28"/>
+    <preference name="android-targetSdkVersion" value="28" />
     <platform name="android">
-
         <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
             <application android:usesCleartextTraffic="true" />
         </edit-config>
-
         <allow-intent href="market:*" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
@@ -52,19 +50,16 @@
         <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
     </platform>
     <platform name="ios">
-
-      <config-file parent="NSBluetoothAlwaysUsageDescription" target="*-Info.plist">
+        <config-file parent="NSBluetoothAlwaysUsageDescription" target="*-Info.plist">
             <array>
                 <string>App would like to use your bluetooth for communication purposes</string>
             </array>
         </config-file>
-
         <config-file parent="NSBluetoothPeripheralUsageDescription" target="*-Info.plist">
             <array>
                 <string>App would like to use your bluetooth for communication purposes</string>
             </array>
         </config-file>
-        
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <icon height="57" src="resources/ios/icon/icon.png" width="57" />
@@ -101,7 +96,6 @@
         <splash height="2732" src="resources/ios/splash/Default@2x~universal~anyany.png" width="2732" />
     </platform>
     <plugin name="cordova-plugin-admob-free" spec="^0.18.0" />
-   <!-- <plugin name="cordova-plugin-console" spec="^1.1.0" />-->
     <plugin name="cordova-plugin-device" spec="^2.0.2" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <plugin name="cordova-plugin-ionic-webview" spec="^4.1.2" />
@@ -116,5 +110,4 @@
     <plugin name="cordova-plugin-file" spec="^6.0.2" />
     <plugin name="cordova-plugin-file-transfer" spec="^1.7.1" />
     <plugin name="cordova-custom-config" spec="^5.1.0" />
-    
 </widget>
