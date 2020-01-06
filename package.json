@@ -1,6 +1,6 @@
 {
     "name": "mylivres",
-    "version": "0.0.2",
+    "version": "0.1.2",
     "author": "Ionic Framework",
     "homepage": "http://ionicframework.com/",
     "private": true,
@@ -44,7 +44,7 @@
         "cordova-plugin-file-opener2": "^2.2.1",
         "cordova-plugin-file-transfer": "^1.7.1",
         "cordova-plugin-ionic-keyboard": "^2.0.5",
-        "cordova-plugin-ionic-webview": "^1.1.19",
+        "cordova-plugin-ionic-webview": "^4.1.2",
         "cordova-plugin-market": "^1.2.0",
         "cordova-plugin-network-information": "^2.0.2",
         "cordova-plugin-splashscreen": "^5.0.2",
