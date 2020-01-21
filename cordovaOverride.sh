@@ -6,5 +6,4 @@ else
 echo "In Appflow...using cordova@8.1.2"
 npm uninstall -g @ionic-enterprise/cordova
 npm install -g cordova@8.1.2
-cordova platform add ios@5.1.1
 fi
