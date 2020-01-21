@@ -11,4 +11,9 @@
  "cordova-plugin-console": {},
  "cordova-plugin-console": "^1.1.0",
  <plugin name="cordova-plugin-console" spec="^1.1.0" />
- --------------------------------------------------------
+
+
+ 
+ -------------------------ios-------------------------------
+<plugin name="cordova-plugin-ionic-webview" spec="^4.1.2" />
+"cordova-plugin-ionic-webview": "^4.1.2",
