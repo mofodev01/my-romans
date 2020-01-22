@@ -37,7 +37,7 @@ export class MyApp {
     this.initializeApp();
     this.showBanner();
     this.network_space();
-    this.launchInterstitial();
+    //this.launchInterstitial();
     // used for an example of ngFor and navigation   SeriesPage
     this.pages = [
       { title: 'Livres PDF', component: HomePage,icon : "book" },
