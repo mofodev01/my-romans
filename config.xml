@@ -50,10 +50,6 @@
         <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
     </platform>
     <platform name="ios">
-        <feature name="CDVWKWebViewEngine">
-            <param name="ios-package" value="CDVWKWebViewEngine" />
-        </feature>
-        <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
         <preference name="WKWebViewOnly" value="true" />
         <config-file parent="NSBluetoothAlwaysUsageDescription" target="*-Info.plist">
             <array>
@@ -115,4 +111,5 @@
     <plugin name="cordova-plugin-file" spec="^6.0.2" />
     <plugin name="cordova-plugin-file-transfer" spec="^1.7.1" />
     <plugin name="cordova-custom-config" spec="^5.1.0" />
+    <plugin name="cordova-launch-review" spec="^3.1.1" />
 </widget>

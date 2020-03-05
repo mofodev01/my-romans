@@ -26,6 +26,7 @@
         "@ionic-native/file": "^4.20.0",
         "@ionic-native/file-opener": "^4.20.0",
         "@ionic-native/file-transfer": "^4.20.0",
+        "@ionic-native/launch-review": "^4.20.0",
         "@ionic-native/market": "^4.12.2",
         "@ionic-native/network": "^4.20.0",
         "@ionic-native/social-sharing": "^4.12.2",
@@ -37,6 +38,7 @@
         "cordova-admob-sdk": "^0.18.0",
         "cordova-custom-config": "^5.1.0",
         "cordova-ios": "5.1.1",
+        "cordova-launch-review": "^3.1.1",
         "cordova-plugin-add-swift-support": "^2.0.2",
         "cordova-plugin-admob-free": "^0.18.0",
         "cordova-plugin-cocoapod-support": "^1.6.2",
@@ -86,7 +88,8 @@
             "cordova-plugin-file-opener2": {},
             "cordova-plugin-file": {},
             "cordova-plugin-file-transfer": {},
-            "cordova-custom-config": {}
+            "cordova-custom-config": {},
+            "cordova-launch-review": {}
         },
         "platforms": []
     }

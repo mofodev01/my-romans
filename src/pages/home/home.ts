@@ -3,7 +3,7 @@ import { NavController, NavParams,LoadingController} from 'ionic-angular';
 import { JsonDataProvider } from '../../providers/json-data/json-data';
 import { DetailRomansPage } from '../detail-romans/detail-romans';
 import { SearchPage } from '../search/search';
-
+import { LaunchReview } from '@ionic-native/launch-review';
 //declare var fbanfree: any;
 
 @Component({
@@ -17,9 +17,17 @@ export class HomePage {
   serie:string;
     limit = 100;
   constructor(public navCtrl: NavController, public navParams: NavParams
-    , public JsonDataProvider: JsonDataProvider, public loadingCtrl: LoadingController 
+    , public JsonDataProvider: JsonDataProvider, public loadingCtrl: LoadingController ,
+    private launchReview: LaunchReview
     ) {
       this.serie = "des"; 
+      this.rate();
+  }
+  rate(){
+    if(this.launchReview.isRatingSupported()){
+      this.launchReview.rating()
+        .then(() => console.log('Successfully launched rating dialog'));
+    }
   }
   doInfinite(infiniteScrollEvent) {
     this.limit += 20;

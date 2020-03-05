@@ -50,6 +50,7 @@ import { AudioPage } from '../pages/audio/audio';
 import { File } from "@ionic-native/file";
 import { FileTransfer } from "@ionic-native/file-transfer";
 //import { Media } from '@ionic-native/media';
+import { LaunchReview } from '@ionic-native/launch-review';
 @NgModule({
   declarations: [
     MyApp,
@@ -111,7 +112,8 @@ import { FileTransfer } from "@ionic-native/file-transfer";
     //ScreenOrientation,
     //DocumentViewer,
     FileTransfer,
-    File
+    File,
+    LaunchReview
    
   ]
 })
