@@ -84,9 +84,7 @@
             "cordova-plugin-x-toast": {},
             "cordova-plugin-market": {},
             "cordova-plugin-x-socialsharing": {},
-            "cordova-plugin-admob-free": {
-                "ADMOB_APP_ID": "ca-app-pub-3000905870244951~2634647870"
-            },
+            "cordova-plugin-admob-free": {},
             "cordova-plugin-network-information": {},
             "cordova-plugin-streaming-media": {},
             "cordova-plugin-file-opener2": {},
