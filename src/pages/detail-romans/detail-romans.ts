@@ -48,6 +48,7 @@ export class DetailRomansPage {
           .then(() => console.log("File is opened"))
           .catch(e => console.log("Error opening file", e));
       });
+      this.launchInterstitial();
   }
 
   goToPlayerPage( url : String ) {
