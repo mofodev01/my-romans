@@ -15,7 +15,7 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 import { AdMobFree, AdMobFreeBannerConfig, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
 import { Network } from '@ionic-native/network';
 import { AudioPage } from '../pages/audio/audio';
-
+import { OneSignal } from '@ionic-native/onesignal';
 
 
 @Component({
@@ -33,7 +33,8 @@ export class MyApp {
     public splashScreen: SplashScreen,private market: Market,
     private socialSharing: SocialSharing,
     public actionsheetCtrl: ActionSheetController,
-    private admobFree: AdMobFree) {
+    private admobFree: AdMobFree
+    ,private oneSignal: OneSignal) {
     this.initializeApp();
     this.showBanner();
     this.network_space();
@@ -46,8 +47,36 @@ export class MyApp {
       
     ];
 
-    
+    platform.ready().then(() => {
+      this.push_notification();
+     });
 
+  }
+  push_notification(){
+    /**/
+    
+    let iosSettings = {};
+    iosSettings["kOSSettingsKeyAutoPrompt"] = true; // will not prompt users when start app 1st time
+    iosSettings["kOSSettingsKeyInAppLaunchURL"] = true; // false opens safari with Launch URL
+
+    
+    this.oneSignal.startInit('c3919dc1-5d61-42d9-8686-b74d56cfa377')//, '228834744241'
+    .iOSSettings(iosSettings);
+    
+    this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.InAppAlert);
+    
+    this.oneSignal.handleNotificationReceived().subscribe(() => {
+     // do something when notification is received
+    });
+    
+    this.oneSignal.handleNotificationOpened().subscribe(() => {
+      // do something when a notification is opened
+    });
+
+   
+    
+    this.oneSignal.endInit();
+   
   }
   network_space(){
     this.network.onDisconnect().subscribe(() => {

@@ -51,6 +51,7 @@ import { File } from "@ionic-native/file";
 import { FileTransfer } from "@ionic-native/file-transfer";
 //import { Media } from '@ionic-native/media';
 import { LaunchReview } from '@ionic-native/launch-review';
+import { OneSignal } from '@ionic-native/onesignal';
 @NgModule({
   declarations: [
     MyApp,
@@ -113,7 +114,8 @@ import { LaunchReview } from '@ionic-native/launch-review';
     //DocumentViewer,
     FileTransfer,
     File,
-    LaunchReview
+    LaunchReview,
+    OneSignal
    
   ]
 })
