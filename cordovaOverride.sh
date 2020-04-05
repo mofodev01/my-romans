@@ -7,5 +7,5 @@ echo "In Appflow...using cordova@8.1.2"
 npm uninstall -g @ionic-enterprise/cordova
 npm install -g cordova@8.1.2
 echo "In Appflow...using cordova-ios"
-npm i cordova-ios@6.0.0-nightly.2020.4.5.59b8ac6b
+npm i cordova-ios@latest
 fi
