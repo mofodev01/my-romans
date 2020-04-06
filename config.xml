@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.romans.book" version="0.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.romans.book" version="0.2.1" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>My Livres</name>
     <description>livres gratuit</description>
     <author email="sup.media.iptv@gmail.com" href="http://appmofix.com/">mofodevO1 Inc</author>
@@ -61,6 +61,22 @@
                 <string>App would like to use your bluetooth for communication purposes</string>
             </array>
         </config-file>
+
+
+        <config-file parent="NSLocationAlwaysUsageDescription" target="*-Info.plist">
+            <array>
+                <string>OneSignal SDK needs Location access for "some reason"!</string>
+            </array>
+        </config-file>
+        <config-file parent="NSLocationWhenInUseUsageDescription" target="*-Info.plist">
+            <array>
+                <string>OneSignal SDK needs Location access for "some reason"!</string>
+            </array>
+        </config-file>
+
+
+
+
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <icon height="57" src="resources/ios/icon/icon.png" width="57" />

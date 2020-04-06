@@ -62,6 +62,7 @@ export class MyApp {
     
     this.oneSignal.startInit('c3919dc1-5d61-42d9-8686-b74d56cfa377')//, '228834744241'
     .iOSSettings(iosSettings);
+    this.oneSignal.setLocationShared(false);
     
     this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.InAppAlert);
     
