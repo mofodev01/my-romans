@@ -29,7 +29,6 @@ export class HomePage {
 
   launchInterstitial() {
     /**/
-    
       if (this.platform.is('android')) {
       const interstitialConfig: AdMobFreeInterstitialConfig = {
               //isTesting: true, Remove in production
@@ -109,7 +108,7 @@ export class HomePage {
             push_to_search_pdf(){
              
               this.navCtrl.push(SearchPage);
-              this.launchInterstitial();
+              //this.launchInterstitial();
             }
            /*
             ads_facebook(){
