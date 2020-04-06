@@ -4,6 +4,7 @@ import { JsonDataProvider } from '../../providers/json-data/json-data';
 import { DetailRomansPage } from '../detail-romans/detail-romans';
 import { SearchPage } from '../search/search';
 import { LaunchReview } from '@ionic-native/launch-review';
+import { AdMobFree, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
 //declare var fbanfree: any;
 
 @Component({
@@ -19,10 +20,52 @@ export class HomePage {
   constructor(public navCtrl: NavController, public navParams: NavParams
     , public JsonDataProvider: JsonDataProvider, public loadingCtrl: LoadingController ,
     private launchReview: LaunchReview
+    ,private admobFree: AdMobFree
     ) {
       this.serie = "des"; 
       this.rate();
   }
+
+  launchInterstitial() {
+    /**/
+    
+      if (this.platform.is('android')) {
+      const interstitialConfig: AdMobFreeInterstitialConfig = {
+              //isTesting: true, Remove in production
+              autoShow: true,
+          //id: Your Ad Unit ID goes here
+        id:'ca-app-pub-3000905870244951/7672735021'
+        //id:'ca-app-pub-3940256099942544/1033173712'//testads
+      };
+    
+      this.admobFree.interstitial.config(interstitialConfig);
+    
+      
+      this.admobFree.interstitial.prepare().then(() => {
+          // success
+          
+      });
+    
+      }else if (this.platform.is('ios')) {
+        const interstitialConfig: AdMobFreeInterstitialConfig = {
+          //isTesting: true,// Remove in production
+          autoShow: true,
+      //id: Your Ad Unit ID goes here
+     id:'ca-app-pub-3000905870244951/9831994503'
+    };
+    
+    this.admobFree.interstitial.config(interstitialConfig);
+    
+    
+    this.admobFree.interstitial.prepare().then(() => {
+      // success
+      
+    });
+    
+      }
+    }
+
+
   rate(){
     if(this.launchReview.isRatingSupported()){
       this.launchReview.rating()
@@ -65,7 +108,7 @@ export class HomePage {
             push_to_search_pdf(){
              
               this.navCtrl.push(SearchPage);
-              
+              this.launchInterstitial();
             }
            /*
             ads_facebook(){

@@ -2,7 +2,7 @@ import { Component  } from '@angular/core';
 import { NavController, NavParams,Platform,LoadingController, ModalController} from 'ionic-angular';
 import { JsonDataProvider } from '../../providers/json-data/json-data';
 import { StreamingMedia, StreamingVideoOptions } from '@ionic-native/streaming-media';
-import { AdMobFree, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
+//import { AdMobFree, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
 import { FileOpener } from '@ionic-native/file-opener';
 
 
@@ -29,7 +29,7 @@ export class DetailRomansPage {
     ,private fileOpener: FileOpener
     
     ,private transfer: FileTransfer, private file: File
-    ,private admobFree: AdMobFree
+    //,private admobFree: AdMobFree
     ) {
  
   }
@@ -48,7 +48,7 @@ export class DetailRomansPage {
           .then(() => console.log("File is opened"))
           .catch(e => console.log("Error opening file", e));
       });
-      this.launchInterstitial();
+      //this.launchInterstitial();
   }
 
   goToPlayerPage( url : String ) {
@@ -110,7 +110,7 @@ this.streamingMedia.playVideo(''+url+'', options);
 
           
              launchInterstitial() {
-            /**/
+            /*
             
               if (this.platform.is('android')) {
               const interstitialConfig: AdMobFreeInterstitialConfig = {
@@ -146,6 +146,7 @@ this.streamingMedia.playVideo(''+url+'', options);
             });
             
               }
+              */
             }
 
 }
