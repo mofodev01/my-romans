@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams,LoadingController} from 'ionic-angular';
+import { NavController, NavParams,LoadingController,Platform} from 'ionic-angular';
 import { JsonDataProvider } from '../../providers/json-data/json-data';
 import { DetailRomansPage } from '../detail-romans/detail-romans';
 import { SearchPage } from '../search/search';
@@ -21,6 +21,7 @@ export class HomePage {
     , public JsonDataProvider: JsonDataProvider, public loadingCtrl: LoadingController ,
     private launchReview: LaunchReview
     ,private admobFree: AdMobFree
+    , private platform: Platform
     ) {
       this.serie = "des"; 
       this.rate();
