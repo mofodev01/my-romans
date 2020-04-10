@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "32629879781",
+    "firebase_url": "https://myromans-27c72.firebaseio.com",
+    "project_id": "myromans-27c72",
+    "storage_bucket": "myromans-27c72.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32629879781:android:a735cdfce512305121f50c",
+        "android_client_info": {
+          "package_name": "com.romans.book"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "32629879781-7c4drhq23cntd2ogrln5astl8gidpopt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2JwMNMFok-bxnKGeHd0n43_R6XAT_lhw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "32629879781-7c4drhq23cntd2ogrln5astl8gidpopt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

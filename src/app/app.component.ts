@@ -54,8 +54,26 @@ export class MyApp {
   }
   push_notification(){
     /**/
-    
-    let iosSettings = {};
+    if (this.platform.is('android')) {
+
+      this.oneSignal.startInit('8b9cb6fd-ca80-4853-a726-daa64f39468a', '32629879781');
+
+      this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.InAppAlert);
+      
+      this.oneSignal.handleNotificationReceived().subscribe(() => {
+       // do something when notification is received
+      });
+      
+      this.oneSignal.handleNotificationOpened().subscribe(() => {
+        // do something when a notification is opened
+      });
+      
+      this.oneSignal.endInit();
+     
+     
+      }else if(this.platform.is('ios')){
+      
+        let iosSettings = {};
     iosSettings["kOSSettingsKeyAutoPrompt"] = true; // will not prompt users when start app 1st time
     iosSettings["kOSSettingsKeyInAppLaunchURL"] = true; // false opens safari with Launch URL
 
@@ -74,9 +92,9 @@ export class MyApp {
       // do something when a notification is opened
     });
 
-   
-    
     this.oneSignal.endInit();
+     
+      }
    
   }
   network_space(){
