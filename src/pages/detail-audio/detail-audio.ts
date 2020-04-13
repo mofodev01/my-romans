@@ -2,7 +2,7 @@ import { Component  } from '@angular/core';
 import { NavController, NavParams,Platform,LoadingController} from 'ionic-angular';
 import { JsonDataProvider } from '../../providers/json-data/json-data';
 import { StreamingMedia, StreamingAudioOptions } from '@ionic-native/streaming-media';
-import { AdMobFree, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
+
 
 
 
@@ -30,8 +30,7 @@ export class DetailAudioPage  {
   constructor(public navCtrl: NavController, public navParams: NavParams
     , public JsonDataProvider: JsonDataProvider, public loadingCtrl: LoadingController 
     ,private streamingMedia: StreamingMedia
-    , private platform: Platform
-    ,private admobFree: AdMobFree
+   
    
     ) {
       this.index = "description";
@@ -134,46 +133,6 @@ this.streamingMedia.resumeAudio();
 
 }
 
-launchInterstitial() {
- 
-/**/
- if (this.platform.is('android')) {
-  const interstitialConfig: AdMobFreeInterstitialConfig = {
-        // isTesting: true, Remove in production
-          autoShow: true,
-      //id: Your Ad Unit ID goes here
-    id:'ca-app-pub-3000905870244951/7672735021'
-     // id:'ca-app-pub-3940256099942544/1033173712'//testads
 
-  };
-
-  this.admobFree.interstitial.config(interstitialConfig);
-
-  
-  this.admobFree.interstitial.prepare().then(() => {
-      // success
-      
-  });
-
-  }else if (this.platform.is('ios')) {
-    const interstitialConfig: AdMobFreeInterstitialConfig = {
-      //isTesting: true,// Remove in production
-      autoShow: true,
-  //id: Your Ad Unit ID goes here
- id:'ca-app-pub-3000905870244951/9831994503'
-};
-
-this.admobFree.interstitial.config(interstitialConfig);
-
-
-this.admobFree.interstitial.prepare().then(() => {
-  // success
-  
-});
-
-  }
-
-  
-}
 
 }
